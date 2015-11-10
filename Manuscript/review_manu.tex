@@ -848,42 +848,31 @@ positions and the known hydrocarbon geometries. The ensemble average is taken ov
 in present in simulation. Since the amount of data decreases for time intervals approaching the simulation total length,
 only interval lengths less than half of the total simulation length are usually used, for more details see~\cite{gromacsMANUAL}.
 
-To connect the auto--correltaion functions from simulations to the experimentally measurable spin lattice relaxation times, the spectral density (Eq.~\ref{FT})
-must be first calculated. In principle, this could be done using numerical fourier transformations techniques, 
-however this often leads to unneccessarily large fluctuations. Instead, commonly used apporach is to fit 
-analytical functional form to the calculated auto--correlation function and then use analytical Fourier
-transform of the fitted function~\cite{pastor88,lindahl01,pastor02,wohlert06,ferreira15}. Most commonly 
-the sum of 4 or more exponentials is used as a fitting function~\cite{pastor88,venable93,pastor02,eldho03,ollila07a,ferreira15} but
-also streched exponential has been used~\cite{lindahl01,wohlert06}. Numerically the functional form of the fitting function should not matter as
-long as the fit is good, however, theoretically the correct correlation function form to describe the modes of
-physical motion can be debated~\cite{leftin11,wohlert06,edholm08,klauda08a,klauda08c}. It is clear from correlation functions from simulations that one exponential 
-is not enought to produce a good fit while 4 gives a reasonable fit~\cite{eldho03}. This is not surprising since more
-than one relaxation timescale is definitiely expected to be present in lipids in bilayer~\cite{pastor88,venable93,pastor02,leftin11}.
+To calculate the experimentally measurable spin lattice relaxation times from Eqs. \ref{R1C} and \ref{R1D}, 
+the spectral density must be first calculated from auto-correlation function using Eq.~\ref{FT}. 
+Usually sum of 4 or more exponentials are fitted to the calculated auto--correlation function and then 
+analytical Fourier transform is used to calculate the spectral 
+density~\cite{pastor88,venable93,pastor02,eldho03,ollila07a,ferreira15},
+however some authors have also used streched exponential exponential functions~\cite{lindahl01,wohlert06}.
+The chosen functional form should not affect spin relaxation rate values as long as the fit is good, however 
+the correct form to describe the real relaxation process can be debated~\cite{leftin11,wohlert06,edholm08,klauda08a,klauda08c}. 
+Single exponential function is not enought to describe relaxation observed in simulations while 4 gives a reasonable 
+fit~\cite{eldho03} which is not surprising since more than one relaxation timescales are expected to be present in bilayer
+lipids~\cite{pastor88,venable93,pastor02,leftin11}. The $R_{1}^{C}$ and $R_{1}^{D}$ values are straighforward to
+calculate from Eqs. \ref{R1C} and \ref{R1D} with different Larmor frequencies or as a function of external
+field by using the fitted spectral density function.
 
-After the fitting the analytical form of the spectral density predicted by simulations is available.
-Then its values can be calculated at the required larmor frequency values and substituted to Eqs.~\ref{R1C}
-and~\ref{R1D} to get the $R_{1}^{C}$ and $R_{1}^{D}$. The value of the effective correlation time can be
-calculated directly from the interated area below the correlation function, see Fig.~\ref{correlationF} or from 
-Eq. 30 in Ref.~\cite{ferreira15}.
-
-
-
-
-\subsection{Comparing C--H bond dynamcis between simulations and NMR experiments}
-
-The spin lattice relaxation parameters $R_1^{C}$, $R_1^{D}$ and $R_{1\rho}$ are considered as
-directly measurable experimental parameters and the effective correlation time $\tau_e$ can be derived directly
-from directly measurable parameters without further assumptions (see Eq.~\ref{ECT} and Ref.~\cite{ferreira15}).
-Spin lattice relaxation parameters $R_1^{C}$ and $R_1^{D}$ can be calculated from simulations
-by first calculating the auto--correlation function (Eq.~\ref{gt}), then calculating the spectral
-density from the Fourier transformation (Eq.~\ref{FT}) and finally substituting its values into
-Eqs.~\ref{R1C} and~\ref{R1D} (see also previous section). The effective correlation time can be calculated
-directly from integrated area and order parameter or from Eq. 30 in Ref.~\cite{ferreira15}.
-In practise, the $R_{1\rho}$ cannot be calculated from simulations directly since its value depends
-also on the slow relaxation dynamics ($g_s(t)$ in Eq.~\ref{corrF}) which is not present in simulations.
+The effective correlation time $\tau_e$ can be calculated directly from the integrated area below the correlation 
+function, see Fig.~\ref{correlationF} or by using the exponential sum fitted to the correlation function and  
+Eq. 30 in Ref.~\cite{ferreira15}. The $R_{1\rho}$, used to determine effective correlation time experimentally 
+in Eq. \ref{effCTdef}, cannot be calculated from simulations directly since its value may depend
+also on the slow relaxation dynamics ($g_s(t)$ in Eq.~\ref{corrF}) which is not present in simulations \cite{ferreira15}.
 The same applies to the calculation of NOESY relaxations rates and in this case decay time of 170~ns was assumed for the
 $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{ferreira15}.
 
+
+
+\subsection{Comparing C--H bond dynamics between simulations and NMR experiments}
 
 The magnetic field strength dependence of spin relaxation times between simulations and
 experiments is compared in several studies~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06}. 
