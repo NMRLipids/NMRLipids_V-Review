@@ -1010,56 +1010,41 @@ present in lipid bilayer, a model which can be shown to agree with experiments o
 
 \subsection{Form factor measured with X-ray or Neutron scattering}
 
-In scattering experiments the scattering intensity $I(q)\sim|F(q)|^2S(q)$ is observed,
-where $F(q)$ is the form factor and $S(q)$ is the structure factor. In the case of lipid
-bilayer the structure factor describes the structure of lamellar sheets and the form factor
-describes the internal structure of lipid bilayers. The structure factor depends on the
-topological phase of lipids and can be considered to be practically constant for unilamellar
-vesicles while in multilamellar phase its form is known. Thus, in practise direct
-information about form factor is achieved from the measured scattering intensity.
+Small-angle X-ray or neutron scattering (SAXS/SANS)) experiments probe the overall structure of the lipid bilayer and in particular membrane thickness, area per lipid or lipid chain length.
+Here, the scattering intensity $I(q)\sim|F(q)|^2S(q) / LF$, where $F(q)$ is the bilayer form factor, $S(q)$ is the lattice or structure factor and $LF$ the Lorentz correction ($LF = q^2$ for free-floating lipid vesicles and $LF=q$ for aligned bilayers). For multibilayers in the fluid phase, $S(q)$ is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}, for positionally uncorrelated unilamellar vesicles $S(q)=1$~\cite{Marquardt2015}.
 
-Following the notation from Ref. \cite{kucerka10}, the form factor can be written as 
+The form factor is given by the Fourier transform of the scattering length density (SLD),$f_\alpha(q_z)$,  which can be written, following the notation from Ref. \cite{kucerka10} as 
 \begin{equation}\label{FF}
-|F(q)|=|\int_{-D/2}^{D/2}(\sum_\alpha f_\alpha(q_z)n_\alpha(z) - \rho_s)(\cos(zq_z) + i \sin(zq_z)) {\rm d}z|,
+|F(q)|=|\int_{-D/2}^{D/2}(\sum_\alpha f_\alpha(q_z)n_\alpha(z) - \rho_s) \exp(i z q_z) {\rm d}z|,
 \end{equation}
 where $n_\alpha(z)$ in the atom $\alpha$ number density as a function of membrane normal coordinate $z$,
-$f_\alpha(q_z)$ is the scattering length density, $\rho_s$ is the solvent scattering lenght density
-and integral spans over bilayer with total thickness $D$.
-Neutron scattering length density or X-ray atomic form factors are used for $f_\alpha(q_z)$ depending
-on the used scattering technique. The values for these are available in the literature \cite{??}.
-The last term disappears for symmetric bilayer but not for asymmetric \cite{??}.
-If bilayer symmetry and delta functions for electron densities around atom center are assumed, the Eq. \ref{FF}
-becomes to the commonly used form for x-ray scattering
+$\rho_s$ is the solvent scattering length density and integral spans over the bilayer of thickness $D$.
+For symmetric lipid bilayers Eq.~\ref{FF} simplifies to
 \begin{equation}\label{FFsimpl}
 |F(q)|=|\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z|,
 \end{equation}
-where $\Delta \rho_e(z)$ is the difference between solvent and the total electron densities.
+where $\Delta \rho_e(z)$ is the difference between solvent and sample's SLD. X-ray photons interact with the sample's electron cloud, while neutron scatter off nuclei in a particular manner, leading to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{Marquardt2015}, e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the position of the glycerol backbone. Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments.
 
-The form factor can be measured from unilamellar vesicles, multilamellar vesicles or from order bilayer samples. 
-The results from samples with different topologies are in good agreement, indicating that the bilayer
-structure is similar independently of the lamellar phase topology~\cite{kucerka05,kucerka07}.
-Different sample topologies gives the highest resoution with different $q$ ranges,
-thus the combination of form factors measured from different topologies are of the used
-to maximize the available form factor information~\cite{kucerka05}. In addition, the neutron scattering
-resolution is highest with small $q$ values this giving more accurate on longer scales in real spave, like 
-on bilayer thickness \cite{??}. On the other hand, x-ray scattering has larger resolution with larger $q$ values
-thus giving more accurate information on fine details of the bilayer density profile. Consequently,
-the neutron and x-ray scattering measurements complement each others and the combining the information
-from both gives the most comprehensible picture on bilayer strucuture~\cite{kucerka08a}.
+Of particular interest for the discussion given below is the lipid form factor as a ruler for the MD simulation quality. In the case of free-floating, non-interacting, unilamellar vesicles, the form factor can be directly obtained from the scattering experiment after a simple transformation~\cite{Kucerka.2011}. For multibilayers $F(q)$ is obtained by modeling the SLD (see e.g.~\cite{Heftberger.2014}). In the first case care needs to be taking in subtracting background from water, cell and incoherent scattering. In the second case it is additionally necessary to fit the data with good accuracy. If this is ensured, experimental values for form factors compare well between different laboratories (Fig.~\ref{FormF_comp}), demonstrating the robustness of this experimental observable.
 
-Form factors are quite accurate given that experimental care has been taken. A delicate issue 
-can be subtraction of background (from water and capillary).  \\
+\begin{figure*}[]
+	%  \centering
+	%\includegraphics[width=10.6cm]{../Fig/FormF_comp.eps}
+	\caption{\label{FormF_comp}
+		Comparison of reported X-ray (Panel A) and neutron (Panel B) form factors for POPC bilayers at 30$^\circ$C in different geometries.
+	} 
+\end{figure*}
+
+
 
 \onecolumngrid
 \todo{Discussion about related issues can be found at:
 {\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/1}}
 
 
-\todo{The discussion is going in at: \\
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/2} \\
-Key questions now:\\
-Do we get independetly measured Form Factors plotted to the same figure? \\
-Are there good references for the accuracy?
+\todo{The discussion is going in at: 
+{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/2} 
+Samuli, can you make the Figure from the data I sent?
 }
 \twocolumngrid
 
@@ -1126,15 +1111,12 @@ been often replaced nowdays with more direct comparison~\cite{nagle00} using x-r
 factors~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b}.
 In some studies the comparison is complemented with the comparison to the neutron scattering 
 data~\cite{dickson12,jambeck12,lee14,dickson14,tjornhammar14,madej15}
-In general the models reproduce form factors in good agreement with experiments, especially with lower $q$ values
-indicating that the bilayer dimensions, like thickness, are in good agreement. However, the agreement gets often worse
-with higher $q$ 
+In general the models produce form factors in good agreement with experiments, especially at small $q$ values indicating that the overall bilayer dimensions, like thickness, are reproduced reasonably well. However, the agreement gets often worse
+toward higher $q$ 
 values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jambeck13,lee14,maciejewski14,dickson14,kulig15b,madej15}
-indicating some differences in detailed electron density profiles~\cite{??}.
-For example of the comparison see Fig. \ref{FFcomp}.
-The comparison has been usually done based on visual inspection while also quantitative measure
-for simulated form factor is suggested \cite{kucerka10}.
-In some studies also fourier transform coeffiecients are compared \cite{benz05,??}
+indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing (see e.g. Fig.~\ref{FFcomp}).
+Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
+for simulated form factor has been suggested \cite{kucerka10}, including a comparison of Fourier transform coeffiecients \cite{benz05,??}
 \begin{figure*}[]
 %  \centering
   \includegraphics[width=10.6cm]{../Fig/FFcompMADEJ.eps}
@@ -1159,7 +1141,7 @@ effect is overestimated~\cite{jambeck13,madej15}. Example of such comparison is 
 In studies where the main goal is to interpret the form factors using MD simulations instead of validating the model,
 the area per molecule is often fixed to a certain value in order to reproduce the experimental form factor 
 better~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}.
-With this contaraint is indeed, possible to get the form factors close to the experiments, however, 
+With this constraint it is indeed possible to get the form factors close to the experiments, however, 
 careful comparisons between experimental form factors, MD simulations and SDP model suggest small but measurable 
 structural differences~\cite{kucerka08a,braun13}. The form factor from the SDP model is in better agreement
 with simulations and the extracted stuctural parameters indicate differences especially in the headgroup region~\cite{kucerka08a,braun13} 
@@ -1167,11 +1149,9 @@ which is in agreement with the comparions between simulations and NMR order para
 see also section~\ref{??}.
 
 In conclusion, all the state of the art simulation models gives form factors close to experimental
-data in various conditions indicating that the average bilayer dimensions are in good agreement with simulations
-and experiments. Also the qualitative changes are reproduced, however, sometimes over-or underestimated.
-In general, the conclusions from scattering data agrees with conclusions from NMR data:
-the hydprohopic acyl chains are often well described in simulations, while in glycerol backbone and headgroup 
-regions there is room for improvement.
+data in various conditions indicating reasonable agreement for average bilayer dimensions. Also the qualitative changes are reproduced, however, 
+discrepancies prevail for quantitative details of bilayer structure and changes open changes in temperature and admixture of other lipids such as cholesterol.
+
 
 \onecolumngrid
 \todo{The more detailed discussion can be found at: \\
