@@ -995,70 +995,72 @@ present in lipid bilayer, a model which can be shown to agree with experiments o
 
 \section{Stucture factors from scattering and simulations}
 
-\noindent {\bf For this section I would be more than happy for some help} \\[0.1cm]
+%\noindent {\bf For this section I would be more than happy for some help} \\[0.1cm]
 
 \subsection{Form factor measured with X-ray or Neutron scattering}
 
-
-Small-angle X-ray or neutron scattering (SAXS/SANS)) experiments probe the overall structure of 
-the lipid bilayer and in particular membrane density profile along normal axis, membrane thickness, 
-area per lipid or lipid chain length. The measured scattering intensity can be written as 
-$I(q)\sim|F(q)|^2S(q) / LF$, where $F(q)$ is the bilayer form 
-factor, $S(q)$ is the structure factor and $LF$ the Lorentz correction ($LF = q^2$ 
-for free-floating lipid vesicles and $LF=q$ for aligned bilayers). 
+Small-angle X-ray or neutron scattering (SAXS/SANS)) experiments can be used to
+probe the overall structure of the lipid bilayer, in particular density profiles along normal axis.
+%As far as I understand these are not directly measured: membrane thickness, area per lipid or lipid chain length. 
+The measured scattering intensity can be written as 
+$I(q)\sim|F(q)|^2S(q) / C_{{\rm LF}}$, where $F(q)$ is the bilayer form 
+factor, $S(q)$ is the structure factor and $C_{{\rm LF}}$ the Lorentz correction ($C_{{\rm LF}} = q^2$ 
+for free-floating lipid vesicles and $C_{{\rm LF}}=q$ for aligned bilayers). 
 The structure factor characterizes the crystalline or quasicrystalline structure of bilayer 
 stacks and the form factor describes the scattering length density distribution of the lipid bilayer 
-itself along the bilayer normal. For multibilayers in the 
-fluid phase, $S(q)$ is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}, for 
-positionally uncorrelated unilamellar vesicles $S(q)=1$~\cite{Marquardt2015}.
+itself along the bilayer normal. 
 
-The form factor is given by the Fourier transform of the scattering length density (SLD),
-$f_\alpha(q_z)$,  which can be written, following the notation from Ref. \cite{kucerka10} as 
+Here we are mainly interested in the form factor since the focus on lipid bilayer structure.
+The scattering intensity can be measured with SAXS or SANS from unilamellar vesicles (ULV), 
+oriented multilamellar bilayes (ORI) and un-oriented multilamellar vesicles (MLV).
+Information about the structure factor is needed in all of these cases to extract the 
+form factor from the scattering intensity. For positionally uncorrelated ULVs $S(q)=1$~\cite{Marquardt2015}. 
+For multibilayers in the fluid phase, $S(q)$ is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}.
+For oriented samples the structure factor is usually first determined by fitting this theory to the 
+measured scattering intensity and then the form factor is extracted~\cite{kucerka05}.
+For MLVs also the bilayer scattering lenght density model is typically used and its combination with 
+Caill\'{e} theory is fitted to the scattering intensity~\cite{Heftberger.2014}. 
+Different technical issues must be carefully considered in these approaches, like 
+subtracting background scattering and fitting accuracy. The form factors measured 
+from different geometries~\cite{kucerka05,kucerka07} and research groups are in good agreement
+as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is similar in different samples
+and that the technique is robust.
+\begin{figure*}[]
+	%  \centering
+	\includegraphics[width=10.6cm]{../Fig/FFs.eps}
+	\caption{\label{FormF_comp}
+		Comparison of reported X-ray (Panel A) and neutron (Panel B) form factors for POPC bilayers at 303K in different geometries
+                measured in different groups.
+	} 
+\end{figure*}
+
+By following the notation from Ref. \cite{kucerka10}, the form factor is connected to the bilayer atom number density through the 
+euqation 
 \begin{equation}\label{FF}
 |F(q)|=|\int_{-D/2}^{D/2}(\sum_\alpha f_\alpha(q_z)n_\alpha(z) - \rho_s) \exp(i z q_z) {\rm d}z|,
 \end{equation}
 where $n_\alpha(z)$ in the atom $\alpha$ number density as a function of membrane normal coordinate $z$,
+$f_\alpha(q_z)$ is the atom scattering length density,
 $\rho_s$ is the solvent scattering length density and integral spans over the bilayer of thickness $D$.
-For symmetric lipid bilayers Eq.~\ref{FF} simplifies to
+For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the fourier transformation of scattering length density
+difference between solvent and bilayer $\Delta \rho_e(z)$:
 \begin{equation}\label{FFsimpl}
-|F(q)|=|\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z|,
+|F(q)|=|\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z|.
 \end{equation}
-where $\Delta \rho_e(z)$ is the difference between solvent and sample's SLD. X-ray photons interact with 
-the sample's electron cloud, while neutron scatter off nuclei in a particular manner, leading to distinct 
-contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
+The atom scattering length density $f_\alpha(q_z)$ depends on the type of scattering used since
+X-ray photons interact with the sample's electron cloud, while neutron scatter off nuclei in a particular manner.
+The values for $f_\alpha(q_z)$ can be taken from the literature~\cite{??}.
+This leads also to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
 phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{Marquardt2015}, 
 e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the position of the glycerol 
 backbone. Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments.
 
-Of particular interest for the discussion given below is the lipid form factor as a ruler for the MD simulation 
-quality. In the case of free-floating, non-interacting, unilamellar vesicles, the form factor can be directly 
-obtained from the scattering experiment after a simple transformation~\cite{Kucerka.2011}. For multibilayers 
-$F(q)$ is obtained by modeling the SLD (see e.g.~\cite{Heftberger.2014}). In the first case care needs to be 
-taking in subtracting background from water, cell and incoherent scattering. In the second case it is 
-additionally necessary to fit the data with good accuracy. If this is ensured, experimental values for 
-form factors compare well between different laboratories (Fig.~\ref{FormF_comp}), demonstrating the robustness 
-of this experimental observable.
-
-\begin{figure*}[]
-	%  \centering
-	%\includegraphics[width=10.6cm]{../Fig/FormF_comp.eps}
-	\caption{\label{FormF_comp}
-		Comparison of reported X-ray (Panel A) and neutron (Panel B) form factors for POPC bilayers at 30$^\circ$C in different geometries.
-	} 
-\end{figure*}
-
-
-Form factors can be determined from scattering experiments of unilamellar vesicles, multilamellar vesicles or of ordered bilayers. 
-Kucerka et al.~\cite{kucerka05,kucerka07} showed that form factors determined by x-ray scattering experiments of different samples 
-are in good agreement, indicating that the bilayer
-structure is similar independently of the lamellar phase topology~\cite{kucerka05,kucerka07}.
 Different sample topologies gives the highest resoution with respect to different $q$ ranges,
 thus the combination of form factors measured from different topologies are of the used
 to maximize the available form factor information~\cite{kucerka05}. In addition, neutron scattering provides complementary information 
 about bilayer's internal structure and form factor, because of the difference in scattering length densities between neutron- and x-ray 
 scattering. Consequently, neutron and x-ray scattering measurements complement each others and combining the information
-from both gives the most comprehensive picture on bilayer strucuture~\cite{kucerka08a}. Therefore form factors are quite accurate and 
-robust among different sample topologies and scattering techniques given that experimental care has been taken. \\
+from both gives the most comprehensive picture on bilayer strucuture~\cite{kucerka08a}. \\
 
 
 \onecolumngrid
@@ -1076,7 +1078,12 @@ Samuli, can you make the Figure from the data I sent?
 To calculate scattering form factors from simulations atomic number densities from
 simulations can be substituted into Eq. \ref{FF}. In the case of neutrons the scattering 
 length densities $f_\alpha(q_z)$ are assumed to be independent on $q$ and numerical values can be taken 
-taken from literature {I don't know if we have to cite, because these values can be found everywhere in the web and are very general numbers}. For x-ray scattering it is often assumed that all valence electrons are pointwisely 
+taken from literature 
+{\bf I don't know if we have to cite, because these values can be found everywhere in the web and are very general numbers \\
+SAMULI: I think we have to cite. Non-experts do not know that these are general numbers and can be taken anywhere from the web.
+We have to be very specific in this part because non-experts may not even realize from where neutrons and electrons scatter.
+If you do not know this, the scattering literature becomes often difficult to read and believe.}. 
+For x-ray scattering it is often assumed that all valence electrons are pointwisely 
 located in the position of the atom.~\cite{??}. Furthermore, in most simulations the bilayer is symmetric and
 thus the electron density can be easily calculated and substituted into Eq.~\ref{FFsimpl}. 
 On the other hand, in some studies a gaussian distribution for electrons around atom positions~\cite{benz05} 
