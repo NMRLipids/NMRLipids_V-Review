@@ -874,9 +874,6 @@ $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{fer
 
 \subsection{Comparing C--H bond dynamics between simulations and NMR experiments}
 
-The magnetic field strength dependence of spin relaxation times between simulations and
-experiments is compared in several studies~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06}. 
-Examples of such comparison for acyl chain segments are shown in Fig.~\ref{Rdispersion}.
 \begin{figure}[]
 %  \centering
   \includegraphics[width=8.6cm]{../Fig/Rdispersion.eps}
@@ -887,8 +884,6 @@ Examples of such comparison for acyl chain segments are shown in Fig.~\ref{Rdisp
     B) Comparison of $R_1^{D}$ dependence on magnetic field between experiments and Berger simulations for acyl chain carbons (DMPC bilayer in 300K) adapted from~\cite{wohlert06}.
   } 
 \end{figure}
-On the other, some studies have compared $R_1^{C}$ and $R_1^{D}$ measured with one magnetic field strenght to the value calculated from
-simulations~\cite{feller02,eldho03,ollila07a,klauda08b,klauda12,ferreira15}. Example of such comparison between $R_1^{C}$ from simulations and experiments is shown in Fig.~\ref{RandEFFCT}
 \begin{figure}[]
 %  \centering
   \includegraphics[width=8.6cm]{../Fig/RandEFFCT.eps}
@@ -900,40 +895,26 @@ simulations~\cite{feller02,eldho03,ollila07a,klauda08b,klauda12,ferreira15}. Exa
     Figure adapted from Ferreira et al.~\cite{ferreira15}.
   } 
 \end{figure}
-Comparisons seems to generally show a good agreement with large larmor frequencies which
-is getting worse when the Larmor frequency decreases. On the other hand, the level of the 
-agreement depends on the carbon segment and the type of relaxation used in the comparison;
-Berger model compared with $2$H NMR gives better agreement for C$_7$ segment compared to
-C$_3$ (Fig. \ref{Rdispersion} B)) while comparison to $ 13$C NMR relaxation with one frequency 
-gives similar discrepancy for both segments (Fig. \ref{RandEFFCT}). For CHARMM the agreement
-seems better when going towards bilayer center, see Fig. \ref{Rdispersion} A).
-Due to the complicated connection between molecular dynamics and spin relaxation it
-is not straightforward to make conclusions about the dynamical differences between reality
-and simulations. This is, however, possible with careful analysis as discussed in the next section.
+Spin relaxation rates $R_1^{C}$ and $R_1^{D}$ with one~\cite{feller02,eldho03,ollila07a,klauda08b,klauda12,ferreira15} 
+or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06} external magnetic field 
+strengths have been compared between experiments and simulations. Examples of comparison with several
+magnetic field strengths are shown in Fig.~\ref{Rdispersion} and comparison with one field strength 
+in Fig.~\ref{RandEFFCT} (top). Good agreement often observed with large larmor frequencies 
+is does not usually remain with lower Larmor frequencies, as seen from Fig. \ref{Rdispersion}. 
+The typical spectrometers are in the large Larmor frequency region with good agreement in 
+Fig. \ref{Rdispersion}, thus the agreement with one or two relaxation rates measured 
+with typical spectrometer do not guarantee the correct dynamics in simulations.
+The overestimation of spin relaxation rates with larger Larmor frequencies indicate 
+that the slower timescale motions are overexpressed in simulations, i.e. the dynamics is
+too slow. CHECK!
 
-To ease the intuitive interpretation of experimentally measured rotational dynamics
-Ferreira et al. showed that the effective correlation time can be measured by combining 
-directly measurable quantities without any assumptions on dynamical prosesses present in the 
-fast relaxation regime~\cite{ferreira15}. 
-%It should be noted that a quantity called by 
-%authors as effective correlation or $\tau_e$ has been reported also previously in the 
-%literature, however, these studies typically assume correlation function to have a single
-%exponential form \cite{??}. 
-%Since molecular dynamical simulations and theoretical understanding
-%indicate that assuming a single exponential decay is not realistic, the effective correlation
-%times measured with this assumption should not be quantitatively compared to MD simulations
-%where multiexponential decay has been observed. The approach by Ferreira et al. is model
-%free in the sense that nothing is assumed about the short timescale correlation processes
-%when $\tau_e$ is measured \cite{ferreira15}. 
-The comparison of effective correlation times
-between experiments and simulations for different segments is shown in Fig.~\ref{RandEFFCT}.
-From this result it is straightforward to conclude that acyl chain rotational dynamics 
-is generally well described while in the interfacial region, especially in glycerol backbone,
-the dynamics is too slow in simulations. It should be noted, however, that the effective correlation
-describes the total relaxation over all short timescales present in $g_f(t)$. Even if this is 
-correct, the balance between different processes with different relaxatio times may not be
-correct. This is actually seen in the acyl chains, where $R_1$ does not perfectly agree with
-experiments while $\tau_e$ does.  
+Also effective correlation times are compared with Berger model based simulations together
+with the $R_1^{C}$ values \cite{ferreire15}. The results, shown in Fig.~\ref{RandEFFCT},
+reveal that the general measure for acyl chain rotational dynamics agrees with experiments for this
+models, however closer to interfacial region the dynamics is too slow in simulations. 
+However, the discrepancies for $R_1^{C}$ between experiments and simulations indicate that 
+different dynamical processes are not correctly balanced in simulations, even though good
+agreement is found for $\tau_e$.  
 
 
 
