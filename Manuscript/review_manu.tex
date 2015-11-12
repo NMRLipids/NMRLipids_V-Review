@@ -83,7 +83,7 @@ In this case all the mentioned experiments would be simultaneously interpreted w
 Phosphatidylcholine lipids are chosen since large portion of model membrane studies have been 
 focused on this lipid, producing enough experimental and simulation data to draw comprehensive
 picture on the level of understanding atomistic resolution structure and dynamics.
-We conclude that the acyl chain region structure and its changes are generally well described in simulations, 
+We conclude that the acyl chain region structure and its changes are generally well described in simulations of lipid bilayers, 
 in contrast to the glycerol backbone and choline. Also cation binding is significantly overestimated
 by several models.
 
@@ -106,27 +106,27 @@ by their presence and important role in biological systems \cite{israelachvili80
 Lipid bilayers play direct or indirect role in several physiological and pathological
 molecular scale processes \cite{lee04,kinnunen09,??}. To fully understand these processes the atomistic and
 molecular level understanding of lipids is required. Since atomistic resolution studies are
-extremely difficult from biological samples, purified lipid systems are often used \cite{??}.
+extremely difficult for biological membranes, simplified lipid-only systems are often used \cite{??}.
 The biological relevance of these model systems is supported, e.g. by similar NMR order parameters 
 mesured from living cells, lipid extracts and model systems \cite{??}. 
 
 The most detailed information about lipid bilayer atomistic resolution structure and dynamics has been
-achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,??}. 
+achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,pabst.10,kucerka.11,marquardt15}. 
 The first one giving direct information on structures sampled by individual lipid molecules \cite{jacobs81,davis83,bloom91,??} and
-the latter one giving complementary information on average bilayer properties, like density and thickness \cite{nagle00,??}.
+the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst.10,kucerka.11,marquardt15}.
 Both techniques give robust, accurate and reproducible quantities related to the strucuture and dynamics.
-However, for structural and dynamical interpretation both techniques needs a model which reproduces 
-the measured quantities \cite{jacobs81,davis83,bloom91,nagle00,??}. 
+However, for structural and dynamical interpretation both techniques need to model experimental data to produce 
+the measured quantities \cite{jacobs81,davis83,bloom91,nagle00,pabst.10,kucerka.11,marquardt15}. 
 
-On the other hand, remarkable progress in hardware and software has made possible to 
+On the other hand, remarkable progress in hardware and software allows to 
 routinely perform classical atomistic resolution molecular dynamics (MD) simulations of lipid bilayer with 
 duration of tens or hundreds nanoseconds. Ideally the molecules are sampling realistic
 conformations with realistic speed in these simulations. This can be verified by calculating
 directly measurable quantities from simulations and comparing these to experimental values.
 Here we review such comparisons for different experimental observables: C--H bond order parameters,
-spin relaxation times and form factor. The first and second are measured with NMR thus they 
+spin relaxation times and form factor. The first and second parameters are measured with NMR. Hence, they 
 represent to structure and dynamics sampled by individual lipid molecules, respectively.
-The last is measured with scattering techniques and represents the bilayer average properties.
+The third quantitiy is obtained from elastic X-ray or neutron scattering experiments and encodes the overall structural bilayer properties.
 
 The order parameters and spin lattice relaxation times have been compared between simulations
 and experiments for validation and interpretation since the early days of lipid MD simulations \cite{ploeg82,pastor88}.
@@ -140,7 +140,7 @@ i.e. order parameters, spin relaxation rates and form factor, the simulation can
 as an ultimate model giving interpretation for all these experiments simulatenously.
 In addition, it would be the correct atomistic resolution representation of the system with high
 probability since it reproduces large amount of independetly measured experimental parameters 
-simultaneously. Thus, the model usage of the for further applications would be well justified.
+simultaneously. Thus, usage of the model for further specific questions and applications would be well justified.
 
 Here we review recent studies comparing the order parameters, spin relaxation rates
 and scattering form factors between experiments and simulations in order to quantify the quality
@@ -156,8 +156,7 @@ regions.
  
 The general conclusion from the review is that the hydrophopic acyl chain region is well described
 in simulation models and the atomistic resolution interpretation of experiments has been successfull 
-for this region. However, the glycerol backbone and choline regions are less well described in simulation models which
-may question their usability in studies where this region is important.
+for this region. However, the glycerol backbone and choline regions are less well described in simulation models which may question their usability in studies where this region is important.
 
 The structural details of the these segments are potentially relevant in several biochemical
 applications of atomistic resolution lipid bilayer simulations. For example, 
@@ -200,8 +199,8 @@ average molecules orientations and NMR measurables~\cite{abragam}.
 If the sampled distribution of $\theta$ for a C--H bond are known, the order parameter
 can be straighfowardly calculated from Eq. \ref{orderP}. However, the sampled $\theta$ 
 distribtions cannot be uniquely determined from the known order parameter. Thus the experimental
-order parameter values gives a set of conditions which structural molecular model 
-(more specifically the C--H bond vectors of the model) has to fulfill
+order parameter values gives a set of conditions which the structural molecular model 
+(more specifically the C--H bond vectors of the model) has to fulfill,
 but the experimental order parameters alone cannot be used to uniquely 
 resolve the structure. The same applies practically to all
 experimental parameters used in biomolecular structure determination. 
@@ -222,7 +221,7 @@ structures can be straightforwardly compared to other experimental observables i
 like $^{31}$P chemical shift anisotropy~\cite{chowdhary13}, $^{31}$P-$^{13}$C dipolar couplings~\cite{prakash10},
 spin relaxation data \cite{ferreira15} and scattering data~\cite{kucerka10}. The comparisons
 of the same model to the various independently measured experimental observables significantly reduces the 
-possibility of getting unrealistic structures reproducing correct order parameters.
+possibility of getting unrealistic structures.
 
 The probability for unrealistic structures is further reduced by the large amount of experimentally 
 available order parameter values. As discussed in this review, the order parameters can be measured
@@ -231,10 +230,9 @@ bilayer \cite{seelig77c,jacobs81,davis83,gross97,dvinskikh05a,ferreira13,botan15
 Also the signs~\cite{hong95a,hong95b,gross97} and stereospecifity of C--H segments 
 in the same carbon ({\it forking})~\cite{seelig75,gally81,engel81,gross97,dvinskikh05a,ferreira13}
 are experimentally available. Consequently, a realistic atomistic resolution model,
-for example, for POPC molecule (see Fig.~\ref{allOPs} B)) in liquid crystalline bilayer has to reproduce 82 experimental
-order parameter values.
+for example, for POPC molecule (see Fig.~\ref{allOPs} B)) in liquid crystalline bilayer has to reproduce 82 experimental order parameter values.
 If these parameters are not reproduced for certain segments, the model deficiencies are easy to localize
-since order parameter is very local quantity depending only on the position of two atoms (C-H pair).
+since the segmental order parameter is a very local quantity depending only on the position of two atoms (C-H pair).
 This is an advance over several other accurately measured NMR quantities  
 %like $^{31}$P chemical shift anisotropy~\cite{chowdhary13} and $^{31}$P-$^{13}$C dipolar couplings~\cite{prakash10}
 depending on the position of several atoms \cite{prakash10,chowdhary13}, thus complicating the localization of strucutral differences 
@@ -278,26 +276,22 @@ in the case of disagreement between model and experiments.
 \end{figure*}
 
 
-Experimental order parameter data for single component lipid bilayers is very 
-well available in the literature~\cite{castro07,castro08,leftin11,marsh13,ferreira13,leftin13,leftin14,botan15}. 
-The amount of data, especially from $^{13}$C NMR, has been also increasing lately~\cite{castro07,castro08,ferreira13,leftin13,leftin14}.
-Also changes of order parameters for all lipid segments has been measured respect to several
-different conditions, like temperature \cite{??}, hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and
-due to the presense of ions and charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
+Experimental order parameter data for single component lipid bilayers are easily available in the literature~\cite{castro07,castro08,leftin11,marsh13,ferreira13,leftin13,leftin14,botan15}. 
+The amount of data, especially from $^{13}$C NMR, has been also increasing of late~\cite{castro07,castro08,ferreira13,leftin13,leftin14}.
+Further, changes of order parameters for all lipid segments have been measured various experimental
+different conditions, like temperature \cite{??}, hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and in the presense of ions, charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
 cholesterol \cite{brown78,douliez95,ferreira13,leftin14} and proteins \cite{kuchinka89,roux90,leftin13}.
 The comparison of order parameter responses between experiments and simulations
-has not been much utilized in the literature, thus we will exemplify its potential by showing
-the Na$ +$ ion effect on choline order parameters and its relation to ion partition in both, 
+has not been much utilized so far. Thus we will exemplify its potential by showing
+the effect of Na$^+$ ions on choline order parameters and its relation to ion partition in 
 simulations \cite{ionpaper} and experiments \cite{akutsu81,altenbach84,seelig87,scherer89}.
 
-In this work we discuss only order parameters directly measured from multilamellar samples 
-which are closest experimental analogue to MD simulations with periodic boundary conditions. 
-We do not discuss order parameters measured for other type of samples, 
+In this work we discuss only order parameters obtained from multilamellar samples, as they are  the closest experimental analogue to MD simulations with periodic boundary conditions. 
+We do not discuss order parameters measured for other type of samples, such as,
 e.g. bicelles~\cite{aussenac03,raffard00,sanders92}, or indirect measurements by using, e.g. relaxation
 data~\cite{marbella15} since the comparison to the standard simulation setup is less straightforward.  
 
 
- 
 
 \subsection{Order parameters from $^2$H NMR experiments}\label{DopSECTION}
 
