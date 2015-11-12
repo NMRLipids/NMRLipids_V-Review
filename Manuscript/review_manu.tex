@@ -963,7 +963,7 @@ present in lipid bilayer, a model which can be shown to agree with experiments o
 \subsection{Form factor measured with X-ray or Neutron scattering}
 
 Small-angle X-ray or neutron scattering (SAXS/SANS)) experiments can be used to
-probe the overall structure of the lipid bilayer, in particular density profiles along normal axis.
+probe the overall structure of the lipid bilayer, in particular scattering length density profiles along normal axis.
 %As far as I understand these are not directly measured: membrane thickness, area per lipid or lipid chain length. 
 The measured scattering intensity can be written as 
 $I(q)\sim|F(q)|^2S(q) / C_{{\rm LF}}$, where $F(q)$ is the bilayer form 
@@ -974,20 +974,16 @@ stacks and the form factor describes the scattering length density distribution 
 itself along the bilayer normal. 
 
 Here we are mainly interested in the form factor since the focus on lipid bilayer structure.
-The scattering intensity can be measured with SAXS or SANS from unilamellar vesicles (ULV), 
-oriented multilamellar bilayes (ORI) and un-oriented multilamellar vesicles (MLV).
-Information about the structure factor is needed in all of these cases to extract the 
-form factor from the scattering intensity. For positionally uncorrelated ULVs $S(q)=1$~\cite{marquardt15}. 
-For multibilayers in the fluid phase, $S(q)$ is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}.
-For oriented samples the structure factor is usually first determined by fitting this theory to the 
-measured scattering intensity and then the form factor is extracted~\cite{kucerka05}.
-For MLVs also the bilayer scattering lenght density model is typically used and its combination with 
-Caill\'{e} theory is fitted to the scattering intensity~\cite{Heftberger.2014}. 
-Different technical issues must be carefully considered in these approaches, like 
-subtracting background scattering and fitting accuracy. The form factors measured 
+The scattering intensity can be measured with SAXS or SANS from unilamellar vesicles (ULVs), 
+oriented multilamellar bilayes (ORI) and un-oriented multilamellar vesicles (MLVs).
+Information about the structure factor is needed to extract the 
+form factor from the scattering intensity, except for positionally uncorrelated ULVs, where $S(q)=1$~\cite{marquardt15}. 
+For multibilayers in the fluid phase the structure factor is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}. For oriented samples the form factor is determined by scaling a 2D fit of the Caill\'{e} structure factor (for in-plane and out-of-plane scattering constributions) to the measured scattering intensity~\cite{Lyatskaya.2001,kucerka05}.
+For MLVs the form factor needs to be modeled in combination with the structure factor to fit the scattering intensity~\cite{Heftberger.2014}. This is achieved by using a specific real-space description of the bilayer structure (scattering length density profile). Note that different real-space model yield equivalent form factors. Thus, the form factors are not highly sensitive to the applied model.
+Different technical issues must be carefully considered in all scattering experiments, in particular 
+subtracting background scattering and, in the case of ORI and MLVs, fitting accuracy. The form factors measured 
 from different geometries~\cite{kucerka05,kucerka07} and research groups are in good agreement
-as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is similar in different samples
-and that the technique is robust.
+as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is similar in different preparations of the same lipid and that the technique is highly robust.
 \begin{figure*}[]
 	%  \centering
 	\includegraphics[width=10.6cm]{../Fig/FFs.eps}
@@ -1009,7 +1005,7 @@ The atom scattering length density $f_\alpha(q_z)$ depends on the type of scatte
 X-ray photons interact with the sample's electron cloud, while neutron scatter off nuclei in a particular manner.
 This leads also to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
 phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{marquardt15}, 
-e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the bilayer hydrophopic thickness. 
+e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the membrane's hydrophobic thickness. 
 Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments~\cite{kucerka05,kucerka08a}.
 
 For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the widely used form
@@ -1030,7 +1026,7 @@ where $\Delta \rho_e(z)$ is the scattering length density difference between sol
 
 \subsection{Form factor calculation from simulations}
 The atomic number densities $n_\alpha(z)$ are straighforward to calculcate from simulations and
-then substitute into Eq.~\ref{FF} to calculate the form factor. The atom scattering 
+then substitute into Eq.~\ref{FF} to calculate the form factor. The atomic scattering 
 length densities $f_\alpha(q_z)$ for neutrons are available in the literature~\cite{sears92}.
 For x-ray scattering pointwise valence electron location at atom positions is usually assumed 
 and in this case the $f_\alpha(q_z)$ becomes the number of electron per atom,
@@ -1079,7 +1075,7 @@ In general the models produce form factors in good agreement with experiments, e
 that the overall bilayer dimensions, like thickness, are reproduced reasonably well. However, the agreement gets often worse
 toward higher $q$ 
 values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jambeck13,lee14,maciejewski14,dickson14,kulig15b,madej15}
-indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing (see e.g. Fig.~\ref{FFcomp}).
+indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing or headgroup structure(see e.g. Fig.~\ref{FFcomp}).
 Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
 for simulated form factor quality has been suggested~\cite{kucerka10}. In studies also Fourier transform coeffiecients are
 compared~\cite{benz05}
@@ -1152,7 +1148,7 @@ scattering form factors are reviewed. The purpose of these studies is to quantif
 resolution structural and dynamical quality of simulation models as well as to give an 
 atomistic resolution interpretation for the experimental results. For interpretation of
 these experiments the atomistic resolution MD simulations reproducing all the experiments would be
-an ultimate tool since the same model can be used to interpret all the experiments. For the same 
+an ultimate tool since the same model can be used to jointly interpret NMR and scattering data. For the same 
 reason, this atomistic resolution model would be most likely a realistic representation for
 atomistic resolution strucutre and dynamics of lipid bilayers. The main conclusion of this
 review is that the current MD simulations are not quite yet on the level to perform this task,
@@ -1171,8 +1167,7 @@ between simulations and experiments.\\
 1) the acyl chain structures are generally described realistically for PC lipid bilayers in simulations, 
 2) the changes in acyl chain region are qualitatively correct but not always quantitatively,
 3) the glycerol backbone and choline structures are not within experimental error for any available model and
-4) the results depending on structure and energetics of these sections, like ion binding and lipid--cholesterol interactions
-should be taken with caution. \\
+4) the results depending on structure and energetics of these sections, like ion binding and lipid--cholesterol interactions should be taken with caution. \\
 - The C--H bond rotational dynamics has correct timescale in simulations models for which comparison has been done.
 Most likely the same applies for all models. However, more careful comparison reveals that, e.g. the
 glycerol backbone dynamics is too slow in Berger model. Also for CHARMM model all relaxation prosess
@@ -1182,9 +1177,9 @@ structure between experimental form factor and simulations. This is complementar
 which are related to the sampled structures of individual molecules. These comparisons show that the
 structural lipid bilayer properties like thickness and area per molecule are close to real values, however,
 it seems that there is room for improvement especially in the lipid headgroup region, in agreement with conclusions
-from NMR experiments.  
+from NMR experiments. Additionally, wide-angle x-ray scattering of lipid bilayers, probing short-range positional correlations between hydrocarbons should serve in the future as an additional guide of MD simulations and yield in turn important insight on structural properties of the bilayers (see e.g.~\cite{spaar.2003}). 
 
-When applying lipid bilayer simulations to study complicated biochemical systems it is crusial to recoknize 
+When applying lipid bilayer simulations to study complicated biochemical systems it is crucial to recognize  
 potential artefacts arising from the inaccuracies revealed by these comparisons. Hyphotetical example of
 a situation where artificial conclusions might be difficult to avoid would be study of protein approaching
 PC lipid bilayer in physiological NaCl concentration. If the above mentioned issues are not carefully taken
