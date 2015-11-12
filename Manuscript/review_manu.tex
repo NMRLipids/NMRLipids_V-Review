@@ -1032,45 +1032,81 @@ where $\Delta \rho_e(z)$ is the scattering length density difference between sol
 The atomic number densities $n_\alpha(z)$ are straighforward to calculcate from simulations and
 then substitute into Eq.~\ref{FF} to calculate the form factor. The atom scattering 
 length densities $f_\alpha(q_z)$ for neutrons are available in the literature~\cite{sears92}.
-For x-ray scattering it is often assumed that all valence electrons are pointwisely 
-located in the position of the atom.~\cite{??}. 
-
-On the other hand, in some studies a gaussian distribution for electrons around atom positions~\cite{benz05} 
-or an analytical expression for atom scattering length densities $f_\alpha(q_z)=\sum_{j=1}^4a_je^{-b_j(q/4\pi)^2}+c$
-are assumed~\cite{benz05,kucerka10,??}. In the case of the analytical expression the parameters 
-$a_j$, $b_j$ and $c$ are taken from~\cite{??}. For example, the widely used SIMtoEXP software uses
-the analytical form~\cite{kucerka10} and the parameters $a_j$, $b_j$ and $c$ are taken from~\cite{??}. The effect of different electron density profiles was discussed
-by Benz et al.~\cite{benz05}, however, it is not clear how significant this difference is when form factors are
-compared between simulations and experiments.
-Furthermore, in most simulations the bilayer is symmetric and
-thus the electron density can be easily calculated and substituted into Eq.~\ref{FFsimpl}. 
+For x-ray scattering pointwise valence electron location at atom positions is usually assumed 
+and in this case the $f_\alpha(q_z)$ becomes the number of electron per atom,
+while gaussian electron distribution around atom positions~\cite{benz05} or an analytical expression 
+$f_\alpha(q_z)=\sum_{j=1}^4a_je^{-b_j(q/4\pi)^2}+c$ with parameters $a_j$, $b_j$ and $c$ taken from~\cite{cromer68}  
+are assumed in some studies~\cite{benz05}, including the widely used SIMtoEXP software~\cite{kucerka10}.
+The effect of these choises to the electron density profiles was discussed by Benz et al.~\cite{benz05}, 
+however, it is not clear how stronhly this would affect form factors calculated from simulations.
+In most simulations the bilayer is symmetric, thus the simpler Eq.~\ref{FFsimpl} is used. 
 
 The small bilayer patches used in simulations might depress bilayer undulation modes which are present in large 
 scale experiments~\cite{braun11}. Braun et al. showed that undulations seen in large enough simulations do
 not change the position of form factor minimas but depress the peak hights in the lobes~\cite{braun11}.
 Since the undulations are expected to be present in the experiments, the potential discrepancies 
 between simulations and experiments in the lobe heights may be explained by the lack of undulation 
-motions in simulations.
+motions in simulations. The undulation effects are also sometimes reduced from the experimentally 
+reported form factors by scaling $q$ in x--axis, however, the scaling factor is very close to 1~\cite{kucerka05}.
 
 Simulations give the form factors on absolute scale while experiments obtain them only on a relative scale,
 thus the experimental form factors from different sources has to be scaled for comparison~\cite{kucerka08a,kucerka10}.
-In SIMtoEXP program the scaling is performed using the scaling factor $k$ determined from equation
+For example, in SIMtoEXP program the scaling is performed using the scaling factor $k$ determined from equation
 \begin{equation}
 k=\frac{\sum_{i=1}^N\frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^N\frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}},
 \end{equation} 
 where $F_e(q)$ and $F_s(q)$ are experimental and simulated form factors, respectively, $\Delta F_e(q)$ is the uncertainty
 of the experimental form factor and the summation goes over all $N$ data points~\cite{kucerka08a,kucerka10}.
-In many studies which compare the form factors between experiments and simulations, the details on the scaling
-factor used is not given~\cite{??}. 
+%In many studies which compare the form factors between experiments and simulations, the details on the scaling
+%factor used is not given~\cite{??}. 
 
 \onecolumngrid
 \todo{More discussion at: \\
 {\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/3} \\
 and \\
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/4} \\
-I still think that I have seen undulation correction for experimental data mentioned in the literature.
+{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/4} 
 }
 \twocolumngrid
+
+\subsection{Comparing form factors between simulations and experiments}
+
+The comparison to experimental area per molecule values to validate the lipid density in simulations~\cite{tieleman97} has
+been often replaced nowdays with more direct comparison~\cite{nagle00} using x-ray form 
+factors~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b}.
+In some studies the comparison is complemented with the comparison to the neutron scattering 
+data~\cite{dickson12,jambeck12,lee14,dickson14,tjornhammar14,madej15}
+In general the models produce form factors in good agreement with experiments, especially at small $q$ values indicating 
+that the overall bilayer dimensions, like thickness, are reproduced reasonably well. However, the agreement gets often worse
+toward higher $q$ 
+values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jambeck13,lee14,maciejewski14,dickson14,kulig15b,madej15}
+indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing (see e.g. Fig.~\ref{FFcomp}).
+Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
+for simulated form factor quality has been suggested~\cite{kucerka10}. In studies also Fourier transform coeffiecients are
+compared~\cite{benz05}
+\begin{figure*}[]
+%  \centering
+  \includegraphics[width=10.6cm]{../Fig/FFcompMADEJ.eps}
+\newline
+  \caption{\label{FFcomp}
+    Example of comparison between simulation model and experiment.
+    The agreement is better with low $q$ values and cholesterol induced thickening is overestimated.
+    Figure adapted from Madej et al.~\cite{madej15}.
+  } 
+\end{figure*}
+
+Also changes in form factor due to temperature~\cite{jambeck12,zhuang14}, cholesterol concentration~\cite{jambeck13,madej15} 
+and acyl chain polyunsaturation~\cite{eldho03,klauda12} have been compared between simulations and 
+experiments~\cite{eldho03,kucerka05,pan08,hodzic08,kucerka08,pan09,khelasvili10,kucerka11}.
+Simulation generally reproduce the decreased thickness and increased area with increasing temperature~\cite{jambeck12,zhuang14} and 
+polyunsaturation level~\cite{eldho03,klauda12}, 
+as well as increased thickness and decreased area with increasing cholesterol concentration~\cite{jambeck13,madej15}.
+However, the temperature dependence is underestimated for some systems~\cite{jambeck12,zhuang14} while cholesterol
+effect is overestimated~\cite{jambeck13,madej15}. Example of such comparison is shown in Fig. \ref{FFcomp}.
+
+In conclusion, all the state of the art simulation models gives form factors close to experimental
+data in various conditions indicating reasonable agreement for average bilayer dimensions. Also the qualitative changes are reproduced, however, 
+discrepancies prevail for quantitative details of bilayer structure and changes with temperature and admixture of other lipids such as cholesterol.
+
 
 \subsection{Interplay between simulations and scattering experiments: Validation and interpretation}
 Similarly to NMR order parameters, the form factor gives accurate information about lipid
@@ -1088,37 +1124,7 @@ in several studies for both purposes, to validate the simulations
 model~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b} and to intepret the experiments~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}. 
 The simulations have been also used to improve the fitting based structural models~\cite{??}.
 
-The comparison to experimental area per molecule values to validate the lipid density simulations~\cite{tieleman97} has
-been often replaced nowdays with more direct comparison~\cite{nagle00} using x-ray form 
-factors~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b}.
-In some studies the comparison is complemented with the comparison to the neutron scattering 
-data~\cite{dickson12,jambeck12,lee14,dickson14,tjornhammar14,madej15}
-In general the models produce form factors in good agreement with experiments, especially at small $q$ values indicating that the overall bilayer dimensions, like thickness, are reproduced reasonably well. However, the agreement gets often worse
-toward higher $q$ 
-values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jambeck13,lee14,maciejewski14,dickson14,kulig15b,madej15}
-indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing (see e.g. Fig.~\ref{FFcomp}).
-Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
-for simulated form factor has been suggested \cite{kucerka10}, including a comparison of Fourier transform coeffiecients \cite{benz05,??}
-\begin{figure*}[]
-%  \centering
-  \includegraphics[width=10.6cm]{../Fig/FFcompMADEJ.eps}
-\newline
-  \caption{\label{FFcomp}
-    Example of comparison between simulation model and experiment.
-    The agreement is better with low $q$ values and cholesterol induced thickening is overestimated.
-    Figure adapted from Madej et al.~\cite{madej15}.
-  } 
-\end{figure*}
 
-
-Also changes in form factor due to temperature~\cite{jambeck12,zhuang14}, cholesterol concentration~\cite{jambeck13,madej15} 
-and acyl chain polyunsaturation~\cite{eldho03,klauda12} 
-has been compared between simulations and experiments~\cite{eldho03,kucerka05,pan08,hodzic08,kucerka08,pan09,khelasvili10,kucerka11}.
-Simulation generally reproduce the decreased thickness and increased area with increasing temperature~\cite{jambeck12,zhuang14} and 
-polyunsaturation level~\cite{eldho03,klauda12}, 
-as well as increased thickness and decreased area with increasing cholesterol concentration~\cite{jambeck13,madej15}.
-However, the temperature dependence is underestimated for some systems~\cite{jambeck12,zhuang14} while cholesterol
-effect is overestimated~\cite{jambeck13,madej15}. Example of such comparison is shown in Fig. \ref{FFcomp}.
 
 In studies where the main goal is to interpret the form factors using MD simulations instead of validating the model,
 the area per molecule is often fixed to a certain value in order to reproduce the experimental form factor 
@@ -1130,9 +1136,6 @@ with simulations and the extracted stuctural parameters indicate differences esp
 which is in agreement with the comparions between simulations and NMR order parameter indicating issues in the same region~\cite{botan15}, 
 see also section~\ref{??}.
 
-In conclusion, all the state of the art simulation models gives form factors close to experimental
-data in various conditions indicating reasonable agreement for average bilayer dimensions. Also the qualitative changes are reproduced, however, 
-discrepancies prevail for quantitative details of bilayer structure and changes open changes in temperature and admixture of other lipids such as cholesterol.
 
 
 \onecolumngrid
