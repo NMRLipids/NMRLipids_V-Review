@@ -111,12 +111,12 @@ The biological relevance of these model systems is supported, e.g. by similar NM
 mesured from living cells, lipid extracts and model systems \cite{??}. 
 
 The most detailed information about lipid bilayer atomistic resolution structure and dynamics has been
-achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,pabst.10,kucerka.11,marquardt15}. 
+achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
 The first one giving direct information on structures sampled by individual lipid molecules \cite{jacobs81,davis83,bloom91,??} and
-the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst.10,kucerka.11,marquardt15}.
+the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst10,kucerka11,marquardt15}.
 Both techniques give robust, accurate and reproducible quantities related to the strucuture and dynamics.
 However, for structural and dynamical interpretation both techniques need to model experimental data to produce 
-the measured quantities \cite{jacobs81,davis83,bloom91,nagle00,pabst.10,kucerka.11,marquardt15}. 
+the measured quantities \cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
 
 On the other hand, remarkable progress in hardware and software allows to 
 routinely perform classical atomistic resolution molecular dynamics (MD) simulations of lipid bilayer with 
@@ -870,45 +870,44 @@ $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{fer
 
 \begin{figure}[]
 %  \centering
-  \includegraphics[width=8.6cm]{../Fig/Rdispersion.eps}
+  \includegraphics[width=8.6cm]{../Fig/RdisperisonCHARMM.eps}
 \newline
-  \caption{\label{Rdispersion}
-    A) Comparison of $R_1^{C}$ dependence on magnetic field between experiments and CHARMM simulations for acyl chain carbons (DPPC bilayer in 323K) adapted from~\cite{klauda08a}.
+  \caption{\label{RdispersionCHARMM}
+    Comparison of $R_1^{C}$ dependence on magnetic field between experiments~\cite{brown83,klauda08a} and different CHARMM simulations~\cite{klauda10} 
+    for acyl chain carbons (DPPC bilayer in 323K) adapted from~\cite{klauda10}.
     Experiments as points; MD simulations as solid and dashed lines; and a model-free fit to the vesicle data as dotted lines. 
-    B) Comparison of $R_1^{D}$ dependence on magnetic field between experiments and Berger simulations for acyl chain carbons (DMPC bilayer in 300K) adapted from~\cite{wohlert06}.
-  } 
+     } 
 \end{figure}
 \begin{figure}[]
 %  \centering
   \includegraphics[width=8.6cm]{../Fig/RandEFFCT.eps}
 \newline
   \caption{\label{RandEFFCT}
-    (top)  $R_1^{C}$ for POPC bilayer in 298K calculated from simulations with Berger model compared to experimental results measured 
-    with field strength correspondin to the Larmor frequency of 125 MHz for $^{13}$C.
-    (bottom) Effective correlation times for the same system compared between simulations and experiments. 
-    Figure adapted from Ferreira et al.~\cite{ferreira15}.
+    Comparisons between Berger based models and experimental spin relaxation rates:
+    A) $R_1^{D}$ dependence on magnetic field for acyl chain carbons (DMPC bilayer at 300K) adapted from~\cite{wohlert06},
+    B) $R_1^{C}$ measured with field strength correspondin to the Larmor frequency of 125 MHz for $^{13}$C (POPC bilayer at 298K) and
+    C) effective correlation times $\tau_e$ (POPC bilayer at 298K) adapted from Ferreira et al.~\cite{ferreira15}.
   } 
 \end{figure}
-Spin relaxation rates $R_1^{C}$ and $R_1^{D}$ with one~\cite{feller02,eldho03,ollila07a,klauda08b,klauda12,ferreira15} 
-or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06} external magnetic field 
-strengths have been compared between experiments and simulations. Examples of comparison with several
-magnetic field strengths are shown in Fig.~\ref{Rdispersion} and comparison with one field strength 
-in Fig.~\ref{RandEFFCT} (top). Good agreement often observed with large larmor frequencies 
-is does not usually remain with lower Larmor frequencies, as seen from Fig. \ref{Rdispersion}. 
-The typical spectrometers are in the large Larmor frequency region with good agreement in 
-Fig. \ref{Rdispersion}, thus the agreement with one or two relaxation rates measured 
-with typical spectrometer do not guarantee the correct dynamics in simulations.
-The overestimation of spin relaxation rates with larger Larmor frequencies indicate 
-that the slower timescale motions are overexpressed in simulations, i.e. the dynamics is
-too slow. CHECK!
+Spin relaxation rates $R_1^{C}$ and $R_1^{D}$ with one~\cite{feller02,eldho03,ollila07a,klauda08b,ferreira15} 
+or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06,klauda12} external magnetic field 
+strengths have been compared between experiments and simulations mainly for CHARMM (Fig. \ref{RdispersionCHARMM}) 
+and Berger based models (Fig. \ref{RandEFFCT}). The comparison with several
+magnetic field strengths shows good agreement between experiments with large larmor frequencies 
+for both CHARMM and Berger based models in Figs.~\ref{RdispersionCHARMM} and~\ref{RandEFFCT} A), respectively.
+With increasing larmor frequencies both models show a good agreement deep in the acyl chain region
+while closer to the interfacial motional modes corresponding lower Larmor frequencies seems to over presented
+in both models. Since lower larger Larmor frequencies correspond larger correlation times, this may
+indicate too slow dynamics closer to the interfacial region. 
 
-Also effective correlation times are compared with Berger model based simulations together
-with the $R_1^{C}$ values \cite{ferreire15}. The results, shown in Fig.~\ref{RandEFFCT},
-reveal that the general measure for acyl chain rotational dynamics agrees with experiments for this
-models, however closer to interfacial region the dynamics is too slow in simulations. 
-However, the discrepancies for $R_1^{C}$ between experiments and simulations indicate that 
-different dynamical processes are not correctly balanced in simulations, even though good
-agreement is found for $\tau_e$.  
+This is in line with the comparison between experimental and simulated effective correltion time for Berger
+based POPC model, shown in Fig.~\ref{RandEFFCT} C); the effective correlation times for acyl chain region agrees 
+with experiments while closer to the interfacial region the correlation times are too large in simulations. 
+The discrepancies for $R_1^{C}$ between experiments and simulations for acyl chain region seen in Fig.~\ref{RandEFFCT} B)
+indicate, however, that different dynamical processes are not correctly balanced in simulations despite of good
+agreement for $\tau_e$.  On the other hand, good agreement for spin lattice relaxation rates for polyunsaturated acyl chains
+between experiments with large Larmor frequneciens and simulations with both, CHARMM~\cite{eldho03,klauda12} and Berger 
+based~\cite{ollila07a} models, are reported.
 
 
 
@@ -989,7 +988,7 @@ Here we are mainly interested in the form factor since the focus on lipid bilaye
 The scattering intensity can be measured with SAXS or SANS from unilamellar vesicles (ULV), 
 oriented multilamellar bilayes (ORI) and un-oriented multilamellar vesicles (MLV).
 Information about the structure factor is needed in all of these cases to extract the 
-form factor from the scattering intensity. For positionally uncorrelated ULVs $S(q)=1$~\cite{Marquardt2015}. 
+form factor from the scattering intensity. For positionally uncorrelated ULVs $S(q)=1$~\cite{Marquardt15}. 
 For multibilayers in the fluid phase, $S(q)$ is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}.
 For oriented samples the structure factor is usually first determined by fitting this theory to the 
 measured scattering intensity and then the form factor is extracted~\cite{kucerka05}.
@@ -1026,7 +1025,7 @@ The atom scattering length density $f_\alpha(q_z)$ depends on the type of scatte
 X-ray photons interact with the sample's electron cloud, while neutron scatter off nuclei in a particular manner.
 The values for $f_\alpha(q_z)$ can be taken from the literature~\cite{??}.
 This leads also to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
-phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{Marquardt2015}, 
+phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{Marquardt15}, 
 e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the position of the glycerol 
 backbone. Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments.
 
