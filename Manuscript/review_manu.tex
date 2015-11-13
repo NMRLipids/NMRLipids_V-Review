@@ -108,7 +108,7 @@ molecular scale processes \cite{lee04,kinnunen09,??}. To fully understand these 
 molecular level understanding of lipids is required. Since atomistic resolution studies are
 extremely difficult for biological membranes, simplified lipid-only systems are often used \cite{??}.
 The biological relevance of these model systems is supported, e.g. by similar NMR order parameters 
-mesured from living cells, lipid extracts and model systems \cite{??}. 
+mesured from living cells, lipid extracts and model systems \cite{gally81,scherer87}. 
 
 The most detailed information about lipid bilayer atomistic resolution structure and dynamics has been
 achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
@@ -142,29 +142,28 @@ In addition, it would be the correct atomistic resolution representation of the 
 probability since it reproduces large amount of independetly measured experimental parameters 
 simultaneously. Thus, usage of the model for further specific questions and applications would be well justified.
 
-Here we review recent studies comparing the order parameters, spin relaxation rates
-and scattering form factors between experiments and simulations in order to quantify the quality
-of simulation models and interpret the experiments. Also relevat techical details on experimental
-data and simulation analysis is reviewed. We focus on phosphatidylcholine lipid
+Here we discuss comparisons of order parameters, spin relaxation rates
+and scattering form factors between simulations and experiments in order to quantify the 
+simulation model quality and interpret the experiments. Also related technical details on experimental
+data and simulation analysis are discussed. We focus on phosphatidylcholine lipid
 bilayers due to most comprehensive available datasets for both, simulations and experiments.
-However, the basic ideas of the approach is valid also for other lipids and surfactants and there
-is also data and literature available \cite{??}. We also discuss the observed structural changes of
-lipids induced by external conditions and their relation, e.g. to ion partition. 
-We pay special attention on the accuracy and usability of the NMR order parameter data which
-is often underestimated in the literature, especially for the glycerol backbone and choline
-regions.
- 
-The general conclusion from the review is that the hydrophopic acyl chain region is well described
-in simulation models and the atomistic resolution interpretation of experiments has been successfull 
-for this region. However, the glycerol backbone and choline regions are less well described in simulation models which may question their usability in studies where this region is important.
+However, the basic ideas of the approach is valid also for other molecules \cite{kapla12,nowacka13,ferreira14}. 
+We pay special attention on the accuracy and applications of the NMR order parameter data 
+for the glycerol backbone and choline which is often overlooked in the literature.
+Changes in lipid bilayer properties with varying conditions and the relation
+to, e.g. ion partition are also discussed.
 
-The structural details of the these segments are potentially relevant in several biochemical
-applications of atomistic resolution lipid bilayer simulations. For example, 
-interactions between lipid bilayer with ions, drug molecules or proteins may be dependent
-on the detailed headgroup structure. Due to the large variation of lipid headgroups present
-in biological systems, its chemical details are most likely important at least for some
-physiological processes. One goal of this review is to demonstrate how model quality can 
-be estimated to minimize possibility of artificial conclusions made from simulation studies.
+ 
+The general conclusion is that the hydrophopic acyl chain region is well described
+in simulation models, thus the simulations can considered as the state of the art model
+with atomistic resolution for this region. However, the glycerol backbone and choline regions are 
+less well described in simulation models, thus extreme care must be taken when phenomena
+related to the interfacial region are studied with simulations. Due to the large variation of lipid 
+headgroups present in biological systems, the chemical and structural details of the interfacial
+region are expected to be relevant in several biochemical processes. For example, 
+cell membrane interactions with ions, drug molecules and proteins may be regulated by these
+details. Here we demonstrate how atomistic resolution model quality can be estimated to minimize 
+the artificial conclusions produced by simulations.
 
 
 
@@ -279,7 +278,9 @@ in the case of disagreement between model and experiments.
 Experimental order parameter data for single component lipid bilayers are easily available in the literature~\cite{castro07,castro08,leftin11,marsh13,ferreira13,leftin13,leftin14,botan15}. 
 The amount of data, especially from $^{13}$C NMR, has been also increasing of late~\cite{castro07,castro08,ferreira13,leftin13,leftin14}.
 Further, changes of order parameters for all lipid segments have been measured various experimental
-different conditions, like temperature \cite{??}, hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and in the presense of ions, charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
+different conditions, like temperature \cite{seelig74,gally75,seelig77,douliez95}, 
+hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and in the presense 
+of ions, charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
 cholesterol \cite{brown78,douliez95,ferreira13,leftin14} and proteins \cite{kuchinka89,roux90,leftin13}.
 The comparison of order parameter responses between experiments and simulations
 has not been much utilized so far. Thus we will exemplify its potential by showing
