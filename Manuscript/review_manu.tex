@@ -714,14 +714,7 @@ and lipid bilayer, simulated in physiological salt concentration~\cite{arkhipov1
 
 \section{C-H bond rotational dynamics from spin relaxation rates and simulations}\label{dynamicsSECTION}
 
-%\noindent {\bf Here will be described:}\\[0.1cm]
-
-%\noindent How the rotational dynamics measured by using NMR relaxation experiments. \\
-%How the relaxation experiments are connected and compared with simulations. \\
-%What can be learned and what has been learned about the rotational dynamics from the comparison between spin relaxation and simulations \\[0.5 cm]
-
-\todo{This is the first sketch of this section. A lot of references should be added, the text should polished,
-things should be added and checked and figures should be improved. However, the main strucutre and idea of the section should be visible.}
+\todo{This should be close to final now. The text and figures should polished though.}
 
 \subsection{Definition and properties of rotational auto--correlation function}
 The second order auto-correlation function for the reorientation of the C--H chemical bond axis is defined as
@@ -773,8 +766,8 @@ is illustrated in Fig.~\ref{correlationF}.
 The $g_{\rm{f}}(\tau)$ decays to the plateau having value of $S_{{\rm ch}}$ within few hundred nanoseconds 
 in liquid crystalline lipid bilayers with planar symmetry~\cite{ferreira15}, as illustrated in Fig~\ref{correlationF}. 
 The order parameters from $^2$H NMR and $^{13}$C NMR experiments are measured from this plateau~\cite{ferreira15},
-thus the rotational correlation function describes the time required to sample conformational space 
-within bilayer plane for single molecule segments. The effective correlation time~\cite{Lipari82}
+thus the rotational correlation function describes the average time needed to sample all conformations for 
+a single molecule within the bilayer plane. The effective correlation time~\cite{Lipari82}
 \begin{equation}\label{effCTdef}
 \tau_{e}:=\int_0^{\infty} \frac{g_{\rm{f}}(\tau)-S_{\rm{CH}}^2}{1-S_{\rm{CH}}^2} \mathrm{d}\tau
 \end{equation} 
@@ -782,7 +775,7 @@ gives intuitively measure for this time; larger $\tau_e$ means longer time requi
 With this definition the area between the correlation function and its pleateau becomes $(1-S_{\rm{CH}}^2)\tau_{e}$, 
 as illustrated in Fig.~\ref{correlationF}.
 
-\subsection{Detecting C--H bond dynamics experimentally}
+\subsection{Detecting C--H bond dynamics experimentally}\label{dynamicsEXP}
 
 The C--H bond dynamics in nanosecond timescales can be detected experimentally by measuring
 the spin relaxation rates $R_1^C$ from $^{13}$C NMR and $R_1^D$ from $^2$H NMR. 
@@ -815,7 +808,7 @@ and several spectrometers with different magnetic field strengths, as recently r
 Also the model free approach to measure the effective correlation time (Eq.~\ref{effCTdef}) was recently
 introduced~\cite{ferreira15}. The method is based on the combination of experimental order parameter $S_{{\rm CH}}$,
 spin-lattice relaxation rates $R_1^C$ and the transverse magnetization under a spin lock pulse $R_{1\rho}^{\rm{plateau}}$ 
-measured with appropriate nutation frequency with equation
+measured with appropriate nutation frequency, given through equation
 
 \begin{equation}\label{ECT}
 \tau_{\rm{e}}\approx\frac{5R_{1\rho}^{\rm{plateau}}-3.82R_1^C}{D_{\rm{max}}^2N_{\rm{H}}(1-S_{\rm{CH}}^2)}.
@@ -831,7 +824,7 @@ The hydrogen positions can be generated post-simulationally for united atom simu
 by creating a trajectory with added hydrogens~\cite{lindahl01,wohlert06,ollila07a,ferreira15} based on heavy atoms 
 positions and the known hydrocarbon geometries. The ensemble average is taken over all the time intervals and molecules 
 in present in simulation. Since the amount of data decreases for time intervals approaching the simulation total length,
-only interval lengths less than half of the total simulation length are usually used, for more details see~\cite{gromacsMANUAL}.
+only interval lengths less than half of the total simulation length are typically used; for more details see~\cite{gromacsMANUAL}.
 
 To calculate the experimentally measurable spin lattice relaxation times from Eqs. \ref{R1C} and \ref{R1D}, 
 the spectral density must be first calculated from auto-correlation function using Eq.~\ref{FT}. 
@@ -885,14 +878,14 @@ Spin relaxation rates $R_1^{C}$ and $R_1^{D}$ with one~\cite{feller02,eldho03,ol
 or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06,klauda12} external magnetic field 
 strengths have been compared between experiments and simulations mainly for CHARMM (Fig. \ref{RdispersionCHARMM}) 
 and Berger based models (Fig. \ref{RandEFFCT}). The comparison with several
-magnetic field strengths shows good agreement between experiments with large larmor frequencies 
+magnetic field strengths shows good a agreement with large larmor frequencies 
 for both CHARMM and Berger based models in Figs.~\ref{RdispersionCHARMM} and~\ref{RandEFFCT} A), respectively.
 With increasing larmor frequencies both models show a good agreement deep in the acyl chain region
 while closer to the interfacial motional modes corresponding lower Larmor frequencies seems to over presented
-in both models. Since lower larger Larmor frequencies correspond larger correlation times, this may
+in both models. Since lower Larmor frequencies correspond longer correlation times, this may
 indicate too slow dynamics closer to the interfacial region. 
 
-This is in line with the comparison between experimental and simulated effective correltion time for Berger
+This is in line with the comparison between experimental and simulated effective correlation times for Berger
 based POPC model, shown in Fig.~\ref{RandEFFCT} C); the effective correlation times for acyl chain region agrees 
 with experiments while closer to the interfacial region the correlation times are too large in simulations. 
 The discrepancies for $R_1^{C}$ between experiments and simulations for acyl chain region seen in Fig.~\ref{RandEFFCT} B)
@@ -906,49 +899,50 @@ based~\cite{ollila07a} models, are reported.
 
 \subsection{Interplay between simulations and NMR spin lattice relaxation times: Validation and interpretation of dynamics}
 
-By measuring single spin relaxation times it is almost impossible to draw any conclusions
-about molecular dynamics due to their complicated connection through the spectral density.
-Even changes of relaxation times cannot be directly related to molecular dynamics without further
-information, since, e.g. faster dynamics may lead to the decrease or increase of spin relaxation times,
-depending (i) on the other dynamics processes present and (ii) the used magnetic field strength as demonstrated, for example in~\cite{ferreira15}.
+Most importantly, the fairly good agreement for spin relaxation rates and effective correlation times between 
+simulations and experiments in acyl chain region indicates that the lipid rotational dynamics has the 
+correct order of magnitude in simulations. Consequently, the rapid acyl chain fluctuations observed in 
+simulations can be considered as realistic which further supports the advantage of simulation videos as 
+intutitive lipid bilayer picture compared to the traditional static pictures. While the molecular sampling rates 
+seems to be underestimated closer to the interface, also the sampled structures are not excatly correct
+in simulations \cite{botan15}, thus the sampling rates in simulations are mainly interesting only for people 
+improving the models. 
 
-Careful studies of spin relaxation times as a function of temperature and magnetic field to overcome this issue were 
-recently reviewed by Leftin and Brown~\cite{leftin11}. From compilation of different experimental data sets it was possible to conclude, for example, that the interfacial region of lipid molecules has slower dynamics than the acyl chains~\cite{leftin11}.
-Another successfull approach to interpret the spin relaxation times has been to use the atomistic resolution of molecular dynamics simulations to reproduce first the measured changes and then to analyze the dynamical changes from the simulation trajectory~\cite{feller02,eldho03,nowacka13}.
+As discussed in Section \ref{dynamicsEXP} and for example in Ref. \cite{ferreira15},
+single measured spin relaxation rate values or changes are not straightforwardly connected
+to the molecular dynamics. MD simulations can significantly ease this connection if the
+experimental spin relaxation rates or their differences can be reproduced~\cite{feller02,eldho03,nowacka13}.
 This has been especially useful in the studies of polyunsaturated acyl chain dynamics which concluded --
-by combining the simulation and NMR relaxation data -- that the double bonds speed us the chain dynamics
+by combining the simulation and NMR relaxation data -- that the double bonds speed up the chain dynamics
 due to flexible dihedrals next to the double bonds~\cite{feller02,eldho03,gawrisch03,stillwell03}.
 
-To ease the interpretation of the measured spin relaxation times Ferreira et al. recently introduced a model-free connection between effective correlation time and directly measurable spin relaxation rates~\cite{ferreira15}.
-The main advantages of the effective correlation time is that its connection to molecular dynamics is straightforward in
-the sense that the general dynamics are faster when effective correlation times decrease and {\it vice versa} and
-that it can be quantitatively compared to simulations. As shown in Fig.~\ref{RandEFFCT} these experiments
-immediately show that the glycerol backbone has the slowest dynamics of lipid segments (in agreement with conclusions from the
-combination of several previous experimental sets~\cite{leftin11}) and that the dynamics
-of these is significantly underestimated by the Berger model.
+The successfull interpretation of relaxation time measurements with MD is significantly less laborious
+than careful studies with different temperatures and magnetic field strengths, recently reviewed by 
+Leftin and Brown~\cite{leftin11}. On the other hand, the interpretation is also eased by  
+the recently introduced effective correlation time experiments~\cite{ferreira15}.
+For example, careful compilation of several experimental data sets with different
+temperatures and magnetic fields was needed to conclude that the lipids has slower dynamics in
+interfacial region than in the acyl chains region~\cite{leftin11}, while the same conclusion
+is obvious from the measured effective correlation times in Fig.~\ref{RandEFFCT} \cite{ferreira15}.
+The same is seen also in the MD simulations, however, the simulation model quality is not
+yet on the level to be used alone for interpretataion for interfacial region.
 
-Most importantly, the rough agreement of spin relaxation rates and effective correlation times between 
-simulations and experiments shows that the rotational dynamical processes present in simulations has the 
-correct order of magnitude~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06,feller02,eldho03,ollila07a,klauda08b,klauda12,ferreira15}. 
-Consequently, the dynamical visualizations of simulation trajectories 
-(videos) can be considered as realistic intuitive presentations of lipid bilayers. However,
-in more detailed studies it should be kept in mind that all the dynamical (and also structural) details
-are strictly speaking not correct. 
+Lipid bilayer rotational modes have been often interpreted with the 
+wobble in the cone model~\cite{pastor88,pastor02,klauda08a,klauda08c,sivanandam09} suggesting
+that the whole lipid molecule is wobbling as a cone and that all lipid segments share the same time scale for 
+this motion. Further timescales for segmental dynamics then arises from the dynamics inside the cone. 
+The auto--correlation functions predicted by the model are successfully fitted to the simulation and 
+experimental data~\cite{pastor88,pastor02,klauda08a,klauda08c,sivanandam09}, however,
+fits with similar or better quality would be probably possible also with other type of models as well.
+In addition, significant changes of structure and dynamics experienced in the acyl chain region may not 
+hinge on the headgroup~\cite{ferreiraTHESIS,botan15} indicating weak coupling 
+between these segments, in line with one plausible interpretation for recent field cycling 
+experiments~\cite{roberts09}, and the role of membrane undulations in the low frequency 
+relaxation data is still under discussion~\cite{leftin11,edholm08,klauda08a,klauda08c}.
+Thus, the wobbling in the cone is not yet fully proven to be the correct description for lipid
+rotational dynamics. Lipid models with realistic rotational dynamics for all segments 
+with all timescales could elucidate this issue significantly.
 
-Lipid rotational dynamics have been often interpreted by using the so called wobble in the cone model~\cite{pastor88,pastor02,klauda08a,klauda08c,sivanandam09}.
-The main idea of the model is that the whole lipid molecule is wobbling as a cone such that all segments share the time scale for this motion. In addition, each segments has further timescales
-related to their dynamincs inside the cone. The auto--correlation functions assuming the wobble in the cone
-model can be nicely fit to the simulation data and also some experimental results can be reproduced. 
-However, also auto--correlation functions having different type of dynamics can be used to do the same.
-On the other hand, it has been recently pointed out that significant changes of structure and dynamics 
-experienced in acyl chain region may not hinge on the headgroup~\cite{ferreiraTHESIS,botan15} indicating weak coupling 
-between these segments. This idea is also in line with one possible interpretation given in recent field cycling experiments~\cite{roberts09}.
-In addition, the role of membrane undulations in the relaxation data measured with low frequencies is under discussion~\cite{leftin11,edholm08,klauda08a,klauda08c}.
-
-In conclusion, the overall timescale of rotational dynamics is correct in simulations while the exact correlation times
-and relaxation processes are not fully reproduced. More experimental and simulation studies are needed 
-to fully understand current quality of dynamics in current models. To interpretate the relaxation prcosesses
-present in lipid bilayer, a model which can be shown to agree with experiments on all fast timescales is needed.
 
 
 
