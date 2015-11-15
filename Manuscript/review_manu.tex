@@ -191,7 +191,7 @@ angle between the C--H bond and the membrane normal.
 The numerical values of order parameters vary between $-\frac{1}{2} < S_{{\rm CH}} < +1$
 depending on the sampled $\theta$ distribution.
 The definition is motivated by its connection to the dipolar and quadrupolar splitting measured with
-$^1$H-$^{13}$C and $^2$H NMR techniques, respectively. The functional form comes from 
+$^1$H-$^{13}$C NMR and $^2$H NMR techniques, respectively. The functional form comes from 
 the fundamental theory of interactions between spin systems which gives a connection between 
 average molecules orientations and NMR measurables~\cite{abragam}. 
 
@@ -234,7 +234,7 @@ If these parameters are not reproduced for certain segments, the model deficienc
 since the segmental order parameter is a very local quantity depending only on the position of two atoms (C-H pair).
 This is an advance over several other accurately measured NMR quantities  
 %like $^{31}$P chemical shift anisotropy~\cite{chowdhary13} and $^{31}$P-$^{13}$C dipolar couplings~\cite{prakash10}
-depending on the position of several atoms \cite{prakash10,chowdhary13}, thus complicating the localization of strucutral differences 
+depending on the position of several atoms \cite{prakash10,chowdhary13}, thus complicating the localization of structural differences 
 in the case of disagreement between model and experiments.
 \begin{figure*}[]
 %  \centering
@@ -270,7 +270,7 @@ in the case of disagreement between model and experiments.
     Tj{\"o}rnhammar14 \cite{tjornhammar14},
     Lipid14 \cite{dickson14},
     CHARMM36-UA \cite{lee14}. 
-    The interactive version of this figure is available at  https://plot.ly/$\sim$HubertSantuz/72/lipid-force-field-comparison/.   
+    The interactive version of A) is available at  https://plot.ly/$\sim$HubertSantuz/72/lipid-force-field-comparison/.   
   }
 \end{figure*}
 
@@ -282,14 +282,14 @@ different conditions, like temperature \cite{seelig74,gally75,seelig77,douliez95
 hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and in the presense 
 of ions, charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
 cholesterol \cite{brown78,douliez95,ferreira13,leftin14} and proteins \cite{kuchinka89,roux90,leftin13}.
-The comparison of order parameter responses between experiments and simulations
-has not been much utilized so far. Thus we will exemplify its potential by showing
+Since the comparison of order parameter responses between experiments and simulations
+has not been much utilized, we will exemplify its potential by showing
 the effect of Na$^+$ ions on choline order parameters and its relation to ion partition in 
 simulations \cite{ionpaper} and experiments \cite{akutsu81,altenbach84,seelig87,scherer89}.
 
 In this work we discuss only order parameters obtained from multilamellar samples, as they are  the closest experimental analogue to MD simulations with periodic boundary conditions. 
-We do not discuss order parameters measured for other type of samples, such as,
-e.g. bicelles~\cite{aussenac03,raffard00,sanders92}, or indirect measurements by using, e.g. relaxation
+We do not discuss order parameters measured for other type of samples, such as 
+bicelles~\cite{aussenac03,raffard00,sanders92}, or indirect measurements by using, e.g. relaxation
 data~\cite{marbella15} since the comparison to the standard simulation setup is less straightforward.  
 
 
@@ -303,12 +303,13 @@ in $^2$H NMR experiments through the equation
 \end{equation}
 where $e$ is the elementary charge, $Q$ is the deuteron quadrupole moment and $h$ is the Planck's constant. 
 The parameter $q$ is related to the largest electric field gradient and in practise its value is not known; 
-therefore the static quadrupolar coupling constant $\frac{e^2qQ}{h}$ is defined, and its value measured for 
+therefore the static quadrupolar coupling constant $\frac{e^2qQ}{h}$ is defined, and its is value measured for 
 different compounds in their solid state ($\Delta \nu_Q$ measurement from the system where order parameter is known to be 1). 
-In C-D order parameter measurements for lipids, it is typical to 
-use the value measured for different alkenes, $\frac{e^2qQ}{h}$=170 kHz. The relation between order parameters 
+The value measured for different alkenes, $\frac{e^2qQ}{h}$=170 kHz is typically used in 
+C-D order parameter measurements for lipids. The relation between order parameters 
 and quadrupolar splittings then becomes $S_{{\rm CD}}=0.00784 \times \Delta \nu_{{\rm Q}}$.
-This relation is useful as many publications report only the quadrupolar splittings. For a review and more accurate description see the work of Seelig~\cite{seelig77c}.
+With this relation the quadrupolar splittings reported in the literature can be translated to 
+the order parameter values. For a review and more accurate description see, e.g. Ref.~\cite{seelig77c}.
 
 For $^2H$ NMR measurements the CH$_2$ segments have to be labeled with deuterium.
 This can be done specifically for a certain segment or for the several segments
@@ -339,7 +340,7 @@ is known, but not the third moment $\langle r^3_{{\rm CH}} \rangle$. For this re
 $\frac{D_{{\rm max}}}{2\pi}$~\cite{hong95a,gross97,dvinskikh05a,becker05,ferreira13,ferreira15}.
 
 In contrast, specific labeling is not needed for $^{13}$C NMR experiments due the 
-natural abundance of $^{13}$C.  Labeling could be used though to enhance the signal for a specific 
+natural abundance of $^{13}$C.  Labeling can be, however, used to enhance the signal for a specific 
 segment of interest~\cite{sivanandam09}. Order parameter measurements with $^{13}$C NMR are
 2D experiments, the chemical shift being in the first dimension and dipolar coupling 
 in the second~\cite{hong95a,gross97,dvinskikh05a,ferreira13}. The chemical shift depends on the local chemical environment and is different for each carbon segment. In the second dimension the dipolar coupling
@@ -364,15 +365,16 @@ when the connection between dipolar splitting $\Delta \nu_{{\rm CH}}$ and effect
 
 The measurements of quadrupole $\Delta \nu_Q$ and dipolar $d_{{\rm CH}}$ splittings are relatively accurate, especially for quadrupolar splitting.
 \todo{How accurate exactly?} 
-Thus the quantitative accuracy of measured order parameters is mainly determined by the  
+Thus the quantitative accuracy of measured order parameters is determined in practise by the  
 prefactors connecting the splittings and order parameters in Eqs.~\ref{HNMRop} and~\ref{CNMRop}. 
 Since the prefactors are determined independently in $^2$H and $^{13}$C NMR measurements,
-the quantitative accuracy is best estimated by comparing the measured order parameter values.
+the quantitative accuracy is best estimated by comparing the measured order parameter values
+from different experiments.
 
 These comparisons are done by several authors and generally show a very good 
 agreement~\cite{gross97,dvinskikh05a,ferreira13,botan15,leftin14}.
 Botan et al. collected literature values for PC lipid choline headgroup and glycerol backbone order parameters 
-and concluded that order parameters would be known with the accuracy of $\pm$0.02 for these segments in 
+and suggested that order parameters are known with the accuracy of $\pm$0.02 for these segments in 
 purified PC lipid bilayer samples~\cite{botan15} which agrees with the estimate of Gross et al~\cite{gross97}. 
 Based on this estimation Botan et al. suggested sweet spots where choline and glycerol backbone order parameters from simulations should range, see Fig.~\ref{allOPs} A). Also acyl chain order parameters from different techniques 
 are in good agreement when compared by several authors~\cite{gross97,dvinskikh05a,ferreira13,leftin14},
@@ -390,11 +392,11 @@ The comparison by Ferreira et al.~\cite{ferreira13} for POPC acyl chains is also
 When order parameter changes are measured with varying conditions, like temperature \cite{seelig74,seelig77,douliez95}, 
 hydration level~\cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a}, presense of ions~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
 cholesterol~\cite{brown78,douliez95,ferreira13,leftin14} or proteins~\cite{kuchinka89,roux90,leftin13},
-the prefactors connecting the order parameters and the measured couplings in Eqs.~\ref{HNMRop} and~\ref{CNMRop} can be considered 
+the prefactors connecting order parameters and measured couplings in Eqs.~\ref{HNMRop} and~\ref{CNMRop} can be considered 
 to be unchanged. Therefore, accuracy of the measured change is determined by the accuracy of the splitting 
-measurement, in contrast to the prefactor discussed above. Here we refer to this as a qualitative accuracy. Due to the high resolution of
-splitting measurements, especially in $^2$H NMR, the qualitative accuracy is much higher than the
-quantitative accuracy discussed in previous section.
+measurement, in contrast to the quantitative accuracy discussed in previous section. Here we refer to this 
+as a qualitative accuracy. Due to the high resolution of splitting measurements, especially in $^2$H NMR, 
+the qualitative accuracy is much higher than the quantitative accuracy.
 
 The high qualitative accuracy of order parameter measurements is demonstrated in Figs.~\ref{opIONeffect} and~\ref{opDEHYDeffect}
 showing the measured changes as a function of ion concetrations and hydration level, respectively.
@@ -438,7 +440,7 @@ The results demonstrate the systematic changes only slightly above 0.01 units ca
 
 In conclusion, the order parameter changes can be measured with very high accuracy,
 thus even very small structural changes can be observed. Molecular models are necessary
-to analyze the measured changes to avoid overinterpretation from tiny changes observed in experiments.
+to analyze the measured changes to avoid overinterpretation of minute changes observed in experiments.
 For example, high concentration of cholesterol induces measurable changes (less than 2~kHz) to the DPPC $\alpha$ and $\beta$ 
 quadrupolar splittings, however, the related structural changes are probably almost negligible~\cite{brown78,botan15}.
 
@@ -450,7 +452,7 @@ only the absolute value of order parameter. However, two different $^1$H-$^{13}$
 and DMPC~\cite{hong95a,gross97} allow also the measurement of the sign.
 The experiments report negative order parameters for almost all the segments, only $\alpha$ and $\gamma$ are positive.
 Furthermore, the signs~\cite{hong95a,hong95b,gross97} and magnitudes~\cite{gally81,ferreira13,botan15} of choline headgroup 
-and glycerol backbone order parameters are practically unaffected by the acyl tail contents of the bilayers. 
+and glycerol backbone order parameters are practically unaffected by the acyl chain contents of the bilayers. 
 The results indicate that the order parameter signs for these segments can be assumed to be the same in all PC lipids in bilayer. 
 On the other hand, positive signs for g$_1$, g$_3$ and C$_2$ have been reported by Aussenac et al.~\cite{aussenac03}, which has led to some confusion in the simulation community~\cite{hogberg06,hogberg08,signPOST}. 
 However, these signs were not directly measured but extracted from the model used to interpret 
@@ -486,37 +488,40 @@ shown in Fig.~\ref{qsCACLeffect}.
 
 \subsection{Forking of order parameters}
 
-The order parameters for two C--H bonds in the same CH$_2$ segment are equal for the most segments in 
-lipids~\cite{seelig74,seelig77,seelig78,gally81,gross97,dvinskikh05a,ferreira13}.
-However, this is not the case for g$_1$, g$_3$, and  the C$_2$ carbon in the \textit{sn}-2 chain segments in
-a fluid PC lipid bilayer as observed with both $^2$H NMR~\cite{seelig75,seelig78,engel81,gally81} and 
+The order parameters for two C--H bonds in the same CH$_2$ segment are equal for the most lipid 
+segments~\cite{seelig74,seelig77,seelig78,gally81,gross97,dvinskikh05a,ferreira13}.
+Exceptions in a fluid PC lipid bilayer are g$_1$, g$_3$, and  the C$_2$ carbon in the \textit{sn}-2 chain 
+segments as observed with both $^2$H NMR~\cite{seelig75,seelig78,engel81,gally81} and 
 $^1$H-$^{13}$C NMR techniques~\cite{gross97,dvinskikh05a,ferreira13}, see also Fig.~\ref{allOPs}.
 We call this phenomena {\it forking}, as done also previously to avoid confusion with splittings measured with NMR~\cite{botan15}.
 
 The forking has been studied in detail with $^2$H NMR techniques by separately deuterating the 
 R or S positions in CH$_2$ segments in order to assign order parameters to correct hydrogens \cite{gally81,engel81}.
 These studies also show that the forking arises from differently sampled orientations 
-of the two C--H bonds, but not from two separate populations of lipid conformations~\cite{engel81,gally81}.
-This means that the realistic atomistic resolution molecular model has to reproduce the forking 
-correctly and the isomeric positions of hydrogens must be taken into account when calculating
+of the two C--H bonds, not from two separate populations of lipid conformations~\cite{engel81,gally81}.
+This means that realistic atomistic resolution molecular model has to reproduce the forking 
+correctly and that the isomeric positions of hydrogens must be taken into account when calculating
 order parameters from simulations~\cite{botan15}.
 
 
 
 \subsection{Order parameters from simulations}
 
-Since all the atom coordinates are available from molecular dynamics simulations trajectory,
+Since all the atom coordinates are available from a molecular dynamics simulation trajectory,
 the order parameters can be calculated directly from the definition in Eq.~\ref{orderP}.
-The ensemble average is taken over the time and all the molecules in simulation.
-The hydrogen positions can be generated post-simulationally for united atom simulations without explicit hydrogens 
-by creating a trajectory with added hydrogens~\cite{ollila07a,botan15}, or by using equations to directly calculate 
-order parameters~\cite{tieleman97,vermeer07} based on heavy atoms positions and the known hydrocarbon geometries.
-The first approach is appropriate for accurate structural studies since it allows to analyse forking in contrast to the latter technique.
+The ensemble average is taken over the simulation time and all the molecules in simulation.
+The hydrogen positions can be generated post-simulationally based on heavy atoms positions and the 
+known hydrocarbon geometries for united atom simulations without explicit hydrogens 
+by creating a trajectory with added hydrogens~\cite{ollila07a,botan15} or by using equations to directly calculate 
+order parameters~\cite{tieleman97,vermeer07}. The first approach is appropriate for accurate 
+structural studies since it allows to analyse forking in contrast to the latter technique.
 
-The difference in the analysis methods for the forked segments is most likely the reason for diverging choline and glycerol backbone order parameters reported for the same models by different authors~\cite{poger12,botan15}.
-Also different order parameters for C--H segments attached to double bond are reported for the same model~\cite{bachar04,ollila07a} due to a bug in a widely-used version of the {\it g\_order} program in the Gromacs package.
-The {\it g\_order} program also prints -S$_{{\rm CH}}$, which is the most likely reason for
-the reported positive order parameters for acyl chains in some studies~\cite{ekkabut07}.
+The difference in the analysis methods for the forked segments is most likely the reason for 
+diverging choline and glycerol backbone order parameters reported for the same models by different 
+authors~\cite{poger12,botan15}. Also different order parameters for C--H segments attached to double 
+bond are reported for the same model~\cite{bachar04,ollila07a} due to a bug in a widely-used version of 
+the {\it g\_order} program in the Gromacs package. The {\it g\_order} program also prints -S$_{{\rm CH}}$, 
+which is the most likely reason for the reported positive order parameters for acyl chains in some studies~\cite{ekkabut07}.
 When these technical issues are taken into account, the different order parameters calculations from simulations are 
 in good agreement.
 
@@ -526,10 +531,11 @@ independent simulations~\cite{poger12} and different lipids~\cite{botan15}. All 
 It was recently pointed out that the sampling of individual dihedral angles might be very
 slow compared to the typical (100~ns) simulation timescales~\cite{vogel12}.
 This result raises a question if the molecules sample the full phase phase
-during typical simulation time scales. On the other, another a recent study showed
+during typical simulation time scales. On the other, another recent study showed
 that the slowest rotational auto-correlation function observed (for g$_1$ segment) 
 in the Berger model reached a plateau ($S_\mathrm{CH}^2$) after $\sim$200~ns
-and its relaxation was significantly too slow compared to NMR relaxation experiments~\cite{ferreira15}. 
+and its relaxation was significantly too slow compared to NMR relaxation experiments~\cite{ferreira15},
+see Fig \ref{correlationF}. 
 This indicates that the typical simulation times are long enough for full conformational 
 phase space sampling for the models with realistic dynamics~\cite{ferreira15}.
 
@@ -539,13 +545,14 @@ phase space sampling for the models with realistic dynamics~\cite{ferreira15}.
 
 The acyl chain order parameters are compared between simulations and experiments since the early days of lipid bilayer simulations~\cite{ploeg82,egberts88,stouch93,egberts94,essex94,robinson94,hyvonen95,kothekar96,tieleman96,shinoda97,berger97,tieleman97,klauda08b}. 
 Good agreement has been generally found~\cite{berger97,hogberg08,poger10,ulmschneider09,kukol09,chiu09,klauda10,dickson12,jambeck12,chowdhary13,maciejewski14,tjornhammar14,dickson14,lee14}.
-except for the C$_2$ segment of the {\it sn-2} chain which has a low magnitude and significant forking in all PC lipids, in constrast to C$_2$ of the chain linked to
+except for the C$_2$ segment of the {\it sn-2} chain having low magnitude and significant forking in all PC lipids, in constrast to C$_2$ of the chain linked to
 {\it sn}-1~\cite{seelig74,seelig75,gross97,dvinskikh05a,ferreira13}, for example see Fig.~\ref{allOPs} C). 
 This feature is, however, not analyzed or not reproduced for several lipid models~\cite{hogberg08,siu08,chiu09,kukol09,ulmschneider09,jambeck12,dickson12,chowdhary13,tjornhammar14,maciejewski14}.
-Some models report the small order parameter for C$_2$,  but the forking is not reproduced correctly or analyzed~\cite{siu08,klauda10,chowdhary13,dickson14}.
+Some models report the small order parameter for C$_2$,  but the forking is not correctly reproduced 
+or analyzed~\cite{siu08,klauda10,chowdhary13,dickson14}.
 Among all studied force fields, the united atom CHARMM36 is closest to the experimental results~\cite{lee14}.
 
-Also acyl chain order changes with varying conditions are compared between simulations and experiments
+Also acyl chain order parameter changes with varying conditions are compared between simulations and experiments
 by several authors. Experimentally observed order parameter increase with cholesterol 
 concentration~\cite{dufourc84,lafleur90,douliez95,urbina95,vermeer07,ferreira13} and dehydration~\cite{mallikarjunaiah11,dvinskikh05b} 
 is observed also in simulations~\cite{mashl01,hogberg06,vermeer07,zhu07,lim12,ferreira13,jambeck13,madej15},
@@ -553,9 +560,14 @@ as well as the temperature induced order parameter decrease~\cite{douliez95,zhua
 A more careful comparison reveals, however, that the temperature and dehydration effects are slightly underestimated in simulations 
 compared to experiments~\cite{hogberg06,zhuang14}. Also cholesterol effects to DMPC bilayer are underestimated in the CHARMM36 model~\cite{lim12},
 while Slipids~\cite{jambeck13} and Amber Lipid14~\cite{madej15} models show satisfactory agreement.
-The comparison of a Berger/H{\"o}ltje~\cite{berger97,holtje01} based model to the extensive data set with various POPC/cholesterol mixtures shows good agreement with experiments for low cholesterol concetrations, however, the agreement gets worse for cholesterol concentration $\ge$ 34\%~\cite{ferreira13}. 
-A recent comparison of the Amber Lipid14 model to the same data shows signifincantly better agreement~\cite{madej15}, also shown in Fig.~\ref{cholTAILmadej}. The orientation of cholesterol ring structure is reasonable in all models \cite{vermeer07,lim12,ferreira13,madej15}, 
-however, the cholesterol acyl chain exhibits too low order parameters in the Berger/H{\"o}ltje~\cite{berger97,holtje01} based model and too much forking in Amber Lipid14~\cite{madej15}, while CHARMM36 reproduces experiments well~\cite{lim12}. 
+The comparison of a Berger/H{\"o}ltje~\cite{berger97,holtje01} based model to the extensive data set with 
+various POPC/cholesterol mixtures shows good agreement with experiments for low cholesterol concetrations, 
+however, the agreement gets worse for cholesterol concentration $\ge$ 34\%~\cite{ferreira13}. 
+A recent comparison of the Amber Lipid14 model to the same experimental data shows signifincantly better 
+agreement~\cite{madej15}, shown in Fig.~\ref{cholTAILmadej}. The orientation of cholesterol ring structure 
+is reasonable in all models \cite{vermeer07,lim12,ferreira13,madej15}, 
+however, the cholesterol acyl chain exhibits too low order parameters in the Berger/H{\"o}ltje~\cite{berger97,holtje01} 
+based model \cite{ferreira13} and too much forking in Amber Lipid14~\cite{madej15}, while CHARMM36 reproduces experiments well~\cite{lim12}. 
 \begin{figure*}[]
 %  \centering
   \includegraphics[width=8.6cm]{../Fig/cholTAILmadej.eps}
@@ -612,14 +624,15 @@ These issues were recently dicussed by Botan et al. who also compared order para
 between 13 different simulation models and experiments~\cite{botan15}. The results, shown also in Fig.~\ref{allOPs} A),
 reveal significant differences between models and experiments, and none of the available models
 reproduces all order parameters within experimental error.
-On the other hand, experimentally observed choline order parameter increase and decrease with 
-dehydration~\cite{bechinger91,ulrich94,dvinskikh05b} and cation penetration~\cite{akutsu81,altenbach84}, 
-respectively, were reproduced in simulations~\cite{botan15,ionpaper}.
+On the other hand, experimentally observed choline order parameter increase with 
+dehydration~\cite{bechinger91,ulrich94,dvinskikh05b} and decrease due to cation 
+penetration~\cite{akutsu81,altenbach84} were reproduced in simulations~\cite{botan15,ionpaper}.
 However, especially the effect induced by Na$^+$ ion penetration is strongly overestimated
-in most models which arises most likely from an artificially high partition coefficient~\cite{ionpaper},
+in several models which arises most likely from an artificially high partition coefficient~\cite{ionpaper},
 as also demonstrated in Fig.~\ref{changesDUEna}.
-The effect of cholesterol on glycerol backbone and choline was overestimated
-by the Berger/H{\"o}ltje based model while CHARMM36 and MacRog performed better~\cite{botan15}. 
+The effect of cholesterol on glycerol backbone and choline is overestimated
+by the Berger/H{\"o}ltje based \cite{ferreira13} and Amber Lipid14 \cite{madej15} models 
+while CHARMM36 and MacRog performed better~\cite{botan15}. 
 \begin{figure}[]
 %  \centering
   \includegraphics[width=8.6cm]{../Fig/changesDUEna.eps}
@@ -637,22 +650,22 @@ by the Berger/H{\"o}ltje based model while CHARMM36 and MacRog performed better~
 
 In conclusion, the acyl chain order parameters and their qualitative changes are 
 generally well described in atomistic MD models, except for C$_2$ segment in {\it sn}-2.
-However, all models have difficulties with varying severity to describe the glycerol backbone
-and choline order parameters.
+However, all models have difficulties with varying severity to correctly describe 
+the glycerol backbone and choline order parameters.
 
 
 
-\subsection{Interplay between simulations and NMR order parameters: Validation and interpretation}
+\subsection{Interplay between simulations and NMR order parameters: Validation and interpretation}\label{OPinterplay}
 
 Since the acyl chain order parameters from MD models generally 
 agree with experiments for single component lipid bilayers in full hydration, 
 the conformations sampled in simulations
 can be considered as realistic atomistic resolution structures for 
 the acyl chains (except for the C$_2$ segment in the {\it sn}-2 chain).
-As also the acyl chain rotational dynamics has correct order of magnitude 
+As also the acyl chain rotational dynamics has the correct order of magnitude 
 (see Section~\ref{dynamicsSECTION}), the dynamical nature of 
 hydrophopic region of lipid bilayers seen in simulation videos
-can be considered as a realistic representation. 
+can be considered as a realistic representation of the system. 
 This is significant advancement to the traditional static structural 
 models~\cite{seelig74,schindler75,seelig78,baenziger91}.
 Since lipid bilayers are considered as a simple models for cell- and other 
@@ -663,29 +676,31 @@ Also more detailed structural interpretation has been succesfull for
 acyl chain region, especially for order parameter decrease due to {\it cis} double
 bonds~\cite{feller02,huber02,eldho03,stillwell03,gawrisch03,bachar04,ollila07a}.
 From NMR experiments alone it was not possible to judge if 
-the order parameter decrease arises from reduced chain order or the changes in 
-average $\theta$ angle in Eq.~\ref{orderP}~\cite{??,stillwell03,gawrisch03}.
-The interpretation of NMR experiments with the help of MD simulations and other calculations revealed that
+the order parameter decrease arises from the reduced chain order or the changes in 
+average $\theta$ angle in Eq.~\ref{orderP}~\cite{stillwell03,gawrisch03}.
+The interpretation of NMR experiments with the help of MD simulations revealed that
 double bonds, indeed, decrease the chain order due to the flexible dihedral
 potentials next to the rigid double bonds~\cite{feller02,huber02,eldho03,stillwell03,gawrisch03,bachar04,ollila07a}.
 
-The acyl chain order parameter increase and related bilayer thickening with cholesterol concentration~\cite{??,ferreira13,madej15},
+The acyl chain order parameter increase and related bilayer thickening with cholesterol 
+concentration~\cite{vermeer07,zhu07,lim12,ferreira13,jambeck13,madej15},
 dehydration~\cite{hogberg06,mashl01} and reduced temperature~\cite{zhuang14} are qualitatively reproduced 
 by simulations giving intuitive visualizations for these effects. However, the order parameter
-changes are often under- or overestimated \cite{hogberg06,lim12,zhuang14,ferreira13,madej15,??}, thus
+changes are often under- or overestimated \cite{hogberg06,lim12,zhuang14,ferreira13}, thus
 it is not clear how well the models can be used for atomistic resolution intepretation of these changes.
 For example, delicate lipid-cholesterol interactions are known to induce liquid-ordereded and liquid-disordered
-phase coexistence \cite{ipsen87}. To give atomistic resolution interpreation for this phenomena, the atomistic
-resolution structures and interactions should be correct, which does not seem to the case for Berger/H{\"o}ltje
-based model~\cite{ferreira13} while recent Amber Lipid14 model performs better \cite{madej15}.
+phase coexistence \cite{ipsen87}. To give atomistic resolution interpretation for this phenomena \cite{rog09,somerharju09,rog14,sodt14}, 
+the atomistic resolution structures and interactions should be correct, which does not seem to the case for 
+several models~\cite{lim12,ferreira13,madej15}.
 
 Simulation studies have also predicted changes in the acyl chain region which are yet to be experimentally 
 confirmed, e.g. order parameter decrease due to lipid oxidation and changes in order parameter sign in oxidized 
 acyl chain~\cite{ekkabut07}. %These are actually confirmed but not published yet. 
 
-The usability of MD models for structural interpretation decreases close to the interfacial region since
+The usability of MD models for structural interpretation decrease closer to the interfacial region since the
 experimental glycerol backbone, choline headgroup and {\it sn}-2 C$_2$ segment order parameters are 
-not usually reproduced within experimental error. The forking and low order parameter values for C$_2$ in the {\it sn}-2 are related
+not usually reproduced within experimental error, as discussed in the previous section. 
+The forking and low order parameter values for C$_2$ in the {\it sn}-2 are related
 to the parallel orientation of the chain respect to membrane normal~\cite{schindler75,seelig75}
 which is suggested to have significant contribution e.g. to membrane electrostatic potential~\cite{gawrisch92}.
 Also the atomistic resolution structures sampled by glycerol backbone and choline headgroup are not yet fully 
@@ -731,7 +746,7 @@ j(\omega) =  2\int_0^{\infty} \cos(\omega \tau) g(\tau) d\tau.
 \end{equation}
 
 The auto--correlation function for bond orientations always decays to zero
-in randomly oriented multilamellar samples with long enough time scales due to the
+with long enough time scales in randomly oriented multilamellar samples due to the
 diffusion between differently oriented bilayer regions. 
 However, the relaxation processes occur in two distinct timescales and the auto--correlation function
 can be written as a product of two independent functions~\cite{halle81,ferreira15}
@@ -742,7 +757,7 @@ where $g_{\rm{f}}(\tau)$ describes the fast decay (faster than $\sim \mu$s) due
 to the lipid rotation within bilayer plane and $g_{\rm{s}}(\tau)$ describes the slow motions (slower than $\sim \mu$s)
 from the diffusion between differently oriented bilayer regions.
 The correlation time of 4.2~ms for the slow decay was estimated from the spin-lattice relaxation rates in 
-rotating frame $R_{1\rho}$ measured with different nutation frequencies for multilamellar POPC sample at 300K~\cite{ferreira15}.
+rotating frame $R_{1\rho}$, measured with different nutation frequencies for multilamellar POPC sample at 300K~\cite{ferreira15}.
 The full auto--correlation decaying to zero, including the contribution from the magic angle spinning (MAS) in kHz region~\cite{nowacka10},
 is illustrated in Fig.~\ref{correlationF}. 
 
@@ -764,7 +779,7 @@ is illustrated in Fig.~\ref{correlationF}.
 \end{figure}
 
 
-The $g_{\rm{f}}(\tau)$ decays to the plateau having value of $S_{{\rm ch}}$ within few hundred nanoseconds 
+The $g_{\rm{f}}(\tau)$ decays to the plateau having value of $S_{{\rm CH}}^2$ within few hundred nanoseconds 
 in liquid crystalline lipid bilayers with planar symmetry~\cite{ferreira15}, as illustrated in Fig~\ref{correlationF}. 
 The order parameters from $^2$H NMR and $^{13}$C NMR experiments are measured from this plateau~\cite{ferreira15},
 thus the rotational correlation function describes the average time needed to sample all conformations for 
@@ -772,7 +787,7 @@ a single molecule within the bilayer plane. The effective correlation time~\cite
 \begin{equation}\label{effCTdef}
 \tau_{e}:=\int_0^{\infty} \frac{g_{\rm{f}}(\tau)-S_{\rm{CH}}^2}{1-S_{\rm{CH}}^2} \mathrm{d}\tau
 \end{equation} 
-gives intuitively measure for this time; larger $\tau_e$ means longer time required for the conformational sampling.
+gives intuitive measure for this time; larger $\tau_e$ means longer time required for the conformational sampling.
 With this definition the area between the correlation function and its pleateau becomes $(1-S_{\rm{CH}}^2)\tau_{e}$, 
 as illustrated in Fig.~\ref{correlationF}.
 
@@ -780,7 +795,7 @@ as illustrated in Fig.~\ref{correlationF}.
 
 The C--H bond dynamics in nanosecond timescales can be detected experimentally by measuring
 the spin relaxation rates $R_1^C$ from $^{13}$C NMR and $R_1^D$ from $^2$H NMR. 
-These are connected the molecular dynamics through the spectral density (Eq.~\ref{FT}) and equations
+These are connected the molecular dynamics through the spectral density (Eq.~\ref{FT}) and equations \cite{harris86}
 \begin{equation}\label{R1C}
 R_{1}^{C}=\frac{D_{\rm{max}}^2N_{\rm{H}}}{20}\bigg[j(\omega_{\rm{H}}-\omega_{\rm{C}})+3j(\omega_{\rm{C}})+6j(\omega_{\rm{C}}+\omega_{\rm{H}})\bigg]
 \end{equation}
@@ -797,11 +812,11 @@ spectral density values at the Larmor frequencies $\omega_C$, $\omega_H$ and $\o
 On the other hand, the spectral density value for a given frequency $\omega$ 
 depends on the relative amount of relaxation processes with timescales close to $\omega^{-1}$.
 The Larmor frequencies depend on the spectrometer magnetic field strength and typical
-timescales for $\omega^{-1}$ are between 1-20ns in $^{13}$C NMR and $^2$H NMR experiments.
+timescales for $\omega^{-1}$ are $\sim$1-20ns in $^{13}$C NMR and $^2$H NMR experiments.
 Thus, the $R_1^{C}$ and $R_1^{D}$ values measured with standard spectrometer with fixed external
-field stregth gives a measure of relative amount of relaxation processes with timescales between 1-20ns.
+field stregth gives a measure of relative amount of relaxation processes with the timescales $\sim$1-20ns.
 Further, the measured changes gives only the change of the relative amount of dynamical processes with
-these timescales, not the changes in sampling rate. For further discussion and demonstrations see e.g.~\cite{ferreira15}.
+the timescale detected, not the changes in sampling rate. For further discussion and demonstrations see e.g.~\cite{ferreira15}.
 
 For more comprehensive dynamical picture the spin relaxation parameters are 
 measured with different magnetic field strengths by using the field cycling NMR~\cite{roberts04a,roberts04b,roberts09,sivanandam09}
@@ -821,11 +836,12 @@ measured with appropriate nutation frequency, given through equation
 
 Since all the atom coordinates as a function of time are available from molecular dynamics simulations trajectory,
 the auto--correlation function for each C--H bond can be calculated directly from the definition in Eq.~\ref{gt}.
-The hydrogen positions can be generated post-simulationally for united atom simulations without explicit hydrogens 
-by creating a trajectory with added hydrogens~\cite{lindahl01,wohlert06,ollila07a,ferreira15} based on heavy atoms 
-positions and the known hydrocarbon geometries. The ensemble average is taken over all the time intervals and molecules 
+The hydrogen positions can be generated post-simulationally based on heavy atoms 
+positions and the known hydrocarbon geometries for united atom simulations without explicit hydrogens 
+by creating a trajectory with added hydrogens~\cite{lindahl01,wohlert06,ollila07a,ferreira15}. 
+The ensemble average is taken over all the time intervals and molecules 
 in present in simulation. Since the amount of data decreases for time intervals approaching the simulation total length,
-only interval lengths less than half of the total simulation length are typically used; for more details see~\cite{gromacsMANUAL}.
+only interval lengths less than half of the total simulation time are typically used; for more details see~\cite{gromacsMANUAL}.
 
 To calculate the experimentally measurable spin lattice relaxation times from Eqs. \ref{R1C} and \ref{R1D}, 
 the spectral density must be first calculated from auto-correlation function using Eq.~\ref{FT}. 
@@ -833,7 +849,7 @@ Usually sum of 4 or more exponentials are fitted to the calculated auto--correla
 analytical Fourier transform is used to calculate the spectral 
 density~\cite{pastor88,venable93,pastor02,eldho03,ollila07a,ferreira15},
 however some authors have also used streched exponential exponential functions~\cite{lindahl01,wohlert06}.
-The chosen functional form should not affect spin relaxation rate values as long as the fit is good, however 
+The chosen functional form should not affect the spin relaxation rate values as long as the fit is good, however 
 the correct form to describe the real relaxation process can be debated~\cite{leftin11,wohlert06,edholm08,klauda08a,klauda08c}. 
 Single exponential function is not enought to describe relaxation observed in simulations while 4 gives a reasonable 
 fit~\cite{eldho03} which is not surprising since more than one relaxation timescales are expected to be present in bilayer
@@ -842,9 +858,9 @@ calculate from Eqs. \ref{R1C} and \ref{R1D} with different Larmor frequencies or
 field by using the fitted spectral density function.
 
 The effective correlation time $\tau_e$ can be calculated directly from the integrated area below the correlation 
-function, see Fig.~\ref{correlationF} or by using the exponential sum fitted to the correlation function and  
-Eq. 30 in Ref.~\cite{ferreira15}. The $R_{1\rho}$, used to determine effective correlation time experimentally 
-in Eq. \ref{effCTdef}, cannot be calculated from simulations directly since its value may depend
+function, see Fig.~\ref{correlationF} or by using the exponential sum fitted to the correlation function as  
+in Eq. 30 of Ref.~\cite{ferreira15}. The $R_{1\rho}$, used to determine effective correlation time experimentally 
+in Eq. \ref{effCTdef} cannot be calculated from simulations directly since its value may depend
 also on the slow relaxation dynamics ($g_s(t)$ in Eq.~\ref{corrF}) which is not present in simulations \cite{ferreira15}.
 The same applies to the calculation of NOESY relaxations rates and in this case decay time of 170~ns was assumed for the
 $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{ferreira15}.
@@ -882,9 +898,9 @@ and Berger based models (Fig. \ref{RandEFFCT}). The comparison with several
 magnetic field strengths shows good a agreement with large larmor frequencies 
 for both CHARMM and Berger based models in Figs.~\ref{RdispersionCHARMM} and~\ref{RandEFFCT} A), respectively.
 With increasing larmor frequencies both models show a good agreement deep in the acyl chain region
-while closer to the interfacial motional modes corresponding lower Larmor frequencies seems to over presented
+while closer to the interfacial region motional modes corresponding lower Larmor frequencies seems to overpresented
 in both models. Since lower Larmor frequencies correspond longer correlation times, this may
-indicate too slow dynamics closer to the interfacial region. 
+indicate too slow dynamics close to the interfacial region. 
 
 This is in line with the comparison between experimental and simulated effective correlation times for Berger
 based POPC model, shown in Fig.~\ref{RandEFFCT} C); the effective correlation times for acyl chain region agrees 
@@ -1100,32 +1116,29 @@ discrepancies prevail for quantitative details of bilayer structure and changes 
 
 
 \subsection{Interplay between simulations and scattering experiments: Validation and interpretation}
-Similarly to NMR order parameters, the form factor gives accurate information about lipid
-bilayer structure but the structure cannot be uniquely resolved from the experimental data only.
-To give structural intepretation of order parameters, the model for sampled conformations of 
-single molecules are needed while to interpret the scattering form factor data the model
-for the atom number densities, $n_\alpha(z)$ in Eq.~\ref{FF}, is needed.
-Several models developed and used for this purpose are reviewed by Heberle et al.~\cite{heberle12}.
+The scattering form factor gives accurate information about lipid
+bilayer structure but a model for atom number densities, $n_\alpha(z)$ in Eq.~\ref{FF}, is needed to 
+resolve the structure, analogously to the NMR order parameters. Further, several atom density
+profiles can reproduce essentially the same form factor \cite{kucerka08a}, thus also independent information is needed to 
+confirm the structures suggested by the models, also analogously to the NMR order parameters. 
+As already discussed in Section \ref{OPdefinition}, significant advantage of MD model is that the same model 
+can be straightforwardly compared to both, NMR and scattering data.
 
-Similarly to the NMR order parameters, also MD simulations can be used in the structural
-interpretation if they reproduce the experimental form factors. And in turn,
-if simulation model do not reproduce the experimental form factor its structure is not 
-realistic. The comparison between experimental and simulated form factors has been done 
-in several studies for both purposes, to validate the simulations 
-model~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b} and to intepret the experiments~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}. 
-The simulations have been also used to improve the fitting based structural models~\cite{??}.
-
-
-
-In studies where the main goal is to interpret the form factors using MD simulations instead of validating the model,
-the area per molecule is often fixed to a certain value in order to reproduce the experimental form factor 
-better~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}.
-With this constraint it is indeed possible to get the form factors close to the experiments, however, 
-careful comparisons between experimental form factors, MD simulations and SDP model suggest small but measurable 
-structural differences~\cite{kucerka08a,braun13}. The form factor from the SDP model is in better agreement
-with simulations and the extracted stuctural parameters indicate differences especially in the headgroup region~\cite{kucerka08a,braun13} 
-which is in agreement with the comparions between simulations and NMR order parameter indicating issues in the same region~\cite{botan15}, 
-see also section~\ref{??}.
+Several models, reviewed by Heberle et al.~\cite{heberle12}, are developed to give structural interpretation 
+for the form factor data \cite{fogarty15},  while also MD simulations are 
+used~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}. In these studies the area per molecule 
+is often fixed to a value minimizing the differences between experimental and simulated form 
+factors~\cite{sachs03,klauda06,kucerka08a,kucerka08b,braun13}. Depending on the model used, this
+area per molecule may be close to \cite{braun13} or deviate 
+significantly \cite{sachs03,klauda06,kucerka08a,kucerka08b} from the value predicted 
+by the model in constant pressure simulations. However, with optimized area per molecule all models give
+form factors close to the experiments, despite of the bilayer tension generated in some models.
+On the other hand, comparisons between MD simulations and SDP model suggest small but measurable 
+structural differences~\cite{kucerka08a,braun13}. The form factor from SDP model agrees better
+with experiments and stuctural parameters indicate differences especially in the 
+glycerol backbone and the headgroup regions~\cite{kucerka08a,braun13}, 
+in agreement with comparison between simulations and NMR order parameters~\cite{botan15}, 
+as discussed in section~\ref{OPinterplay}.
 
 
 
