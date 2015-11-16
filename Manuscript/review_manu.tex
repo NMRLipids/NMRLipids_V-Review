@@ -905,11 +905,11 @@ indicate too slow dynamics close to the interfacial region.
 This is in line with the comparison between experimental and simulated effective correlation times for Berger
 based POPC model, shown in Fig.~\ref{RandEFFCT} C); the effective correlation times for acyl chain region agrees 
 with experiments while closer to the interfacial region the correlation times are too large in simulations. 
-The discrepancies for $R_1^{C}$ between experiments and simulations for acyl chain region seen in Fig.~\ref{RandEFFCT} B)
+The discrepancies for $R_1^{C}$ between experiments and simulations for acyl chain region shown in Fig.~\ref{RandEFFCT} B)
 indicate, however, that different dynamical processes are not correctly balanced in simulations despite of good
-agreement for $\tau_e$.  On the other hand, good agreement for spin lattice relaxation rates for polyunsaturated acyl chains
-between experiments with large Larmor frequneciens and simulations with both, CHARMM~\cite{eldho03,klauda12} and Berger 
-based~\cite{ollila07a} models, are reported.
+agreement for $\tau_e$.  On the other hand, spin relaxation rates for polyunsaturated acyl chains
+with large Larmor frequenciens give reasonable values for both, CHARMM~\cite{eldho03,klauda12} and Berger 
+based~\cite{ollila07a} models.
 
 
 
@@ -1150,50 +1150,58 @@ as discussed in section~\ref{OPinterplay}.
 
 \section{Conclusions}
 
-Recent studies quantitatively comparing atomistic resolution structure and dynamics of lipid
-bilayer between experiments using C--H bond order parameters, spin relaxation rates and
-scattering form factors are reviewed. The purpose of these studies is to quantify the atomistic
-resolution structural and dynamical quality of simulation models as well as to give an 
-atomistic resolution interpretation for the experimental results. For interpretation of
-these experiments the atomistic resolution MD simulations reproducing all the experiments would be
-an ultimate tool since the same model can be used to jointly interpret NMR and scattering data. For the same 
-reason, this atomistic resolution model would be most likely a realistic representation for
-atomistic resolution strucutre and dynamics of lipid bilayers. The main conclusion of this
-review is that the current MD simulations are not quite yet on the level to perform this task,
-however, in several aspects indicate that there is potential to improve the models to become 
-truly realistic atomistic resolution representations of these systems. 
+The comparisons of lipid bilayer C--H bond order parameters, spin relaxation rates and
+scattering form factors between MD simulations and experiments for the validation and 
+interpretation of the sampled atomistic resolution structures are reviewed.
+The segmental order parameters and spin relaxation rates, measured with NMR, 
+are related to the sampled structure and dynamics of individual molecules, while the
+scattering form factor is related to the average structure of the whole bilayer.
+NMR and scattering experiments are both highly robust and directly comparable to simulations, 
+thus the sampled lipid and bilayer structures in MD model can be realistic only if these experimental 
+quantities are reproduced with sufficient accuracy. Such an MD simulation model 
+would be an ultimate tool to jointly interpretate the NMR and scattering data.
+Further, such a model reproducing numerous independent experimental observables
+could be  considered as the realistic atomistic resolution representation with high
+probability. 
 
-More specific conclusions are the following: \\
-- The order parameters for each C--H bond in lipid molecules in bilayers can be measured
-with high quantitative accuracy with both $ 2$H NMR and $ 13$C NMR and this data
-is available for wide range of lipids in different conditions. Comparison of this data to simulations
-gives a very detailed picture about the quality of sampled atomistic resolution structures
-in lipid bilayer and may also help in structural interpretation of experiments. 
-The order parameter changes with varying conditions can be used to study and compare structural changes
-between simulations and experiments.\\
-- The main conclusions from the comparison of order parameters between experiments and simulations are:
-1) the acyl chain structures are generally described realistically for PC lipid bilayers in simulations, 
-2) the changes in acyl chain region are qualitatively correct but not always quantitatively,
-3) the glycerol backbone and choline structures are not within experimental error for any available model and
-4) the results depending on structure and energetics of these sections, like ion binding and lipid--cholesterol interactions should be taken with caution. \\
-- The C--H bond rotational dynamics has correct timescale in simulations models for which comparison has been done.
-Most likely the same applies for all models. However, more careful comparison reveals that, e.g. the
-glycerol backbone dynamics is too slow in Berger model. Also for CHARMM model all relaxation prosess
-do not seem to correctly described. \\
-- The development in the scattering methodology has allowed the direct comparison of whole bilayer 
-structure between experimental form factor and simulations. This is complementary to the NMR order parameter
-which are related to the sampled structures of individual molecules. These comparisons show that the
-structural lipid bilayer properties like thickness and area per molecule are close to real values, however,
-it seems that there is room for improvement especially in the lipid headgroup region, in agreement with conclusions
-from NMR experiments. Additionally, wide-angle x-ray scattering of lipid bilayers, probing short-range positional correlations between hydrocarbons should serve in the future as an additional guide of MD simulations and yield in turn important insight on structural properties of the bilayers (see e.g.~\cite{spaar.2003}). 
+The current MD simulation models are not quite yet cabable for this,
+however, with current computational resources and available experimental
+data the community has a fair change to create truly realistic atomistic resolution 
+representations of lipid bilayers. More specifically: \\
+- Atomistic resolution MD simulations give realistic structures and rotational dynamics
+with correct order of magnitude for saturated and unsaturated acyl chains for PC lipid 
+bilayers in full hydration close to 300K (or 323K for DPPC). Thus, the videos given
+by simulations can be considered as a realistic intuitive picture about the acyl chain region.\\
+- Qualitative changes in the acyl chain region with temperature, dehydration and cholesterol are
+correctly described, however, in many cases the quality of atomistic resolution details of the
+changes are not clear. \\
+- Current MD simulations are not yet accurate enough to resolve the atomistic resolution 
+properties of glycerol backbone and choline regions, however, some structural changes can be 
+correctly reproduced. Extreme care must be taken when simulation results are used to study, 
+e.g. lipid--ion or lipid--cholesterol interactions on this region. \\
 
-When applying lipid bilayer simulations to study complicated biochemical systems it is crucial to recognize  
-potential artefacts arising from the inaccuracies revealed by these comparisons. Hyphotetical example of
-a situation where artificial conclusions might be difficult to avoid would be study of protein approaching
-PC lipid bilayer in physiological NaCl concentration. If the above mentioned issues are not carefully taken
-into account one might choose a model where the protein is approaching an effectively positively charged 
-lipid bilayer due to artificial Na$ +$ binding with incorrect choline structure. In addition to
-this the protein might be incorrectly folded already in the bulk water \cite{??}.
+Similar conclusions are often made from the comparisons between simulations and two complementary 
+experimental techniques, NMR and scattering, the first one related to the average properties
+of individual molecules and the latter to the average bilayer properties. 
+In wider perspective it seems that atomistic MD simulations, NMR spectroscopy and scattering all gives
+complementary and coherent information on atomistic resolution biomolecular structure and dynamics. 
+This indicates that the combination of these techniques has a realistic potential to generate atomistic 
+resolution dynamical models of biomolecules in biologically relevant fluid state, however, the
+main current barrier seems to be quality of the interactions described in the MD model.
+
+The demand for atomistically accurate MD models will most likely increase in near future with increasing
+amount of accurate experimental data due the development in NMR methodology  
+for lipids \cite{ferreira13,leftin13,leftin14,ferreira15} and proteins \cite{??}, 
+as well as due to, e.g. wide-angle x-ray scattering of lipid bilayers, probing short-range positional 
+correlations between hydrocarbons~\cite{spaar.2003}. 
+
+%When applying lipid bilayer simulations to study complicated biochemical systems it is crucial to recognize  
+%potential artefacts arising from the inaccuracies revealed by these comparisons. Hyphotetical example of
+%a situation where artificial conclusions might be difficult to avoid would be study of protein approaching
+%PC lipid bilayer in physiological NaCl concentration. If the above mentioned issues are not carefully taken
+%into account one might choose a model where the protein is approaching an effectively positively charged 
+%lipid bilayer due to artificial Na$ +$ binding with incorrect choline structure. In addition to
+%this the protein might be incorrectly folded already in the bulk water \cite{??}.
 
 
 
