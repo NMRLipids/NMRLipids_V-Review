@@ -967,13 +967,13 @@ with all timescales could elucidate this issue significantly.
 %\newpage
 
 
-\section{Stucture factors from scattering and simulations}
+\section{Form factors from scattering and simulations}
 
 %\noindent {\bf For this section I would be more than happy for some help} \\[0.1cm]
 
 \subsection{Form factor measured with X-ray or Neutron scattering}
 
-Small-angle X-ray or neutron scattering (SAXS/SANS)) experiments can be used to
+Small-angle X-ray or neutron scattering (SAXS/SANS) experiments can be used to
 probe the overall structure of the lipid bilayer, in particular scattering length density profiles along normal axis.
 %As far as I understand these are not directly measured: membrane thickness, area per lipid or lipid chain length. 
 The measured scattering intensity can be written as 
@@ -984,12 +984,14 @@ The structure factor characterizes the crystalline or quasicrystalline structure
 stacks and the form factor describes the scattering length density distribution of the lipid bilayer 
 itself along the bilayer normal. 
 
-Here we are mainly interested in the form factor since the focus on lipid bilayer structure.
-The scattering intensity can be measured with SAXS or SANS from unilamellar vesicles (ULVs), 
-oriented multilamellar bilayes (ORI) and un-oriented multilamellar vesicles (MLVs).
+Here the main interest lies in the form factor since we focus on the lipid bilayer structure.
+The scattering intensity can be measured from unilamellar vesicles (ULVs)~\cite{marquardt15}, 
+oriented multilamellar bilayes (ORI)~\cite{Lyatskaya.2001,kucerka05} and un-oriented multilamellar vesicles (MLVs)~\cite{Heftberger.2014}.
 Information about the structure factor is needed to extract the 
 form factor from the scattering intensity, except for positionally uncorrelated ULVs, where $S(q)=1$~\cite{marquardt15}. 
-For multibilayers in the fluid phase the structure factor is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}. For oriented samples the form factor is determined by scaling a 2D fit of the Caill\'{e} structure factor (for in-plane and out-of-plane scattering constributions) to the measured scattering intensity~\cite{Lyatskaya.2001,kucerka05}.
+For multibilayers in the fluid phase the structure factor is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}. 
+For oriented samples the form factor is determined by scaling a 2D fit of the Caill\'{e} structure factor 
+(for in-plane and out-of-plane scattering constributions) to the measured scattering intensity~\cite{Lyatskaya.2001,kucerka05}.
 For MLVs the form factor needs to be modeled in combination with the structure factor to fit the scattering intensity~\cite{Heftberger.2014}. This is achieved by using a specific real-space description of the bilayer structure (scattering length density profile). Note that different real-space model yield equivalent form factors. Thus, the form factors are not highly sensitive to the applied model.
 Different technical issues must be carefully considered in all scattering experiments, in particular 
 subtracting background scattering and, in the case of ORI and MLVs, fitting accuracy. The form factors measured 
@@ -1015,8 +1017,10 @@ $\rho_s$ is the solvent scattering length density and integral spans over the bi
 The atom scattering length density $f_\alpha(q_z)$ depends on the type of scattering used since
 X-ray photons interact with the sample's electron cloud, while neutron scatter off nuclei in a particular manner.
 This leads also to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
-phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{marquardt15}, 
-e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the membrane's hydrophobic thickness. 
+phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{marquardt15},
+e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the membrane's hydrophobic thickness
+and specifically deutreated lipids are used to study lipid structural details \cite{buldt78,buldt79}.
+Also, e.g. $^{44}$Ca has been used to detect Calcium location in lipid bilayer \cite{herbette84}.
 Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments~\cite{kucerka05,kucerka08a}.
 
 For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the widely used form
@@ -1036,21 +1040,21 @@ where $\Delta \rho_e(z)$ is the scattering length density difference between sol
 \twocolumngrid
 
 \subsection{Form factor calculation from simulations}
-The atomic number densities $n_\alpha(z)$ are straighforward to calculcate from simulations and
+The atomic number densities $n_\alpha(z)$ are straighforward to calculate from simulations and
 then substitute into Eq.~\ref{FF} to calculate the form factor. The atomic scattering 
 length densities $f_\alpha(q_z)$ for neutrons are available in the literature~\cite{sears92}.
-For x-ray scattering pointwise valence electron location at atom positions is usually assumed 
+For x-ray scattering pointwise valence electron location at the atom positions is usually assumed 
 and in this case the $f_\alpha(q_z)$ becomes the number of electron per atom,
-while gaussian electron distribution around atom positions~\cite{benz05} or an analytical expression 
+while also gaussian electron distribution around atom positions~\cite{benz05} or an analytical expression 
 $f_\alpha(q_z)=\sum_{j=1}^4a_je^{-b_j(q/4\pi)^2}+c$ with parameters $a_j$, $b_j$ and $c$ taken from~\cite{cromer68}  
 are assumed in some studies~\cite{benz05}, including the widely used SIMtoEXP software~\cite{kucerka10}.
-The effect of these choises to the electron density profiles was discussed by Benz et al.~\cite{benz05}, 
-however, it is not clear how stronhly this would affect form factors calculated from simulations.
+The effect of these choices to the electron density profiles was discussed by Benz et al.~\cite{benz05}, 
+however, it is not clear how strongly this would affect form factors calculated from simulations.
 In most simulations the bilayer is symmetric, thus the simpler Eq.~\ref{FFsimpl} is used. 
 
 The small bilayer patches used in simulations might depress bilayer undulation modes which are present in large 
-scale experiments~\cite{braun11}. Braun et al. showed that undulations seen in large enough simulations do
-not change the position of form factor minimas but depress the peak hights in the lobes~\cite{braun11}.
+scale experiments~\cite{braun11}. Braun et al. showed that undulations seen in large simulations do
+not change the location of form factor minimas but depress the peak hights in the lobes~\cite{braun11}.
 Since the undulations are expected to be present in the experiments, the potential discrepancies 
 between simulations and experiments in the lobe heights may be explained by the lack of undulation 
 motions in simulations. The undulation effects are also sometimes reduced from the experimentally 
@@ -1058,7 +1062,7 @@ reported form factors by scaling $q$ in x--axis, however, the scaling factor is 
 
 Simulations give the form factors on absolute scale while experiments obtain them only on a relative scale,
 thus the experimental form factors from different sources has to be scaled for comparison~\cite{kucerka08a,kucerka10}.
-For example, in SIMtoEXP program the scaling is performed using the scaling factor $k$ determined from equation
+For example, the SIMtoEXP program uses the scaling factor $k$ defined as 
 \begin{equation}
 k=\frac{\sum_{i=1}^N\frac{|F_s(q_i)||F_e(q_i)|}{(\Delta F_e(q_i))^2}}{\sum_{i=1}^N\frac{|F_e(q_i)|^2}{(\Delta F_e(q_i))^2}},
 \end{equation} 
@@ -1078,17 +1082,17 @@ and \\
 \subsection{Comparing form factors between simulations and experiments}
 
 The comparison to experimental area per molecule values to validate the lipid density in simulations~\cite{tieleman97} has
-been often replaced nowdays with more direct comparison~\cite{nagle00} using x-ray form 
+been nowdays often replaced with more direct comparison~\cite{nagle00} using x-ray form 
 factors~\cite{hogberg08,chiu09,klauda10,dickson12,jambeck12,lim12,klauda12,jambeck13,chowdhary13,lee14,maciejewski14,dickson14,tjornhammar14,madej15,kulig15b}.
 In some studies the comparison is complemented with the comparison to the neutron scattering 
-data~\cite{dickson12,jambeck12,lee14,dickson14,tjornhammar14,madej15}
+data with D$_2$O~\cite{dickson12,jambeck12,lee14,dickson14,tjornhammar14,madej15}.
 In general the models produce form factors in good agreement with experiments, especially at small $q$ values indicating 
 that the overall bilayer dimensions, like thickness, are reproduced reasonably well. However, the agreement gets often worse
 toward higher $q$ 
 values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jambeck13,lee14,maciejewski14,dickson14,kulig15b,madej15}
-indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing or headgroup structure(see e.g. Fig.~\ref{FFcomp}).
+(see Fig.~\ref{FFcomp}), indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing or headgroup structure.
 Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
-for simulated form factor quality has been suggested~\cite{kucerka10}. In studies also Fourier transform coeffiecients are
+for simulated form factor quality has been suggested~\cite{kucerka10}. In some studies also Fourier transform coeffiecients are
 compared~\cite{benz05}
 \begin{figure*}[]
 %  \centering
