@@ -57,6 +57,13 @@
 %\altaffiliation{}
 \affiliation{Aalto University}
 
+\author{Georg Pabst}
+%\homepage[]{Your web page}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{University of Graz, Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, Humboldtstr. 50/III, Graz, Austria}
+\altaffiliation{BioTechMed-Graz, Graz, Austria}
+
 
 % Collaboration name, if desired (requires use of superscriptaddress option in \documentclass). 
 % \noaffiliation is required (may also be used with the \author command).
@@ -65,28 +72,27 @@
 
 \date{\today}
 
+\todo{The text should be close to final now. The figures should polished.}
+
+
 \begin{abstract}
 % insert abstract here
-Recent progress in the analysis of lipid bilayer atomistic resolution structure and dynamics
-using combination of robust experimental data and molecular dynamics simulations is reviewed.
-The focus is on order parameters and spin relaxation times measured with NMR and on form factors
-measured with SAXS and SANS for phosphatidylcholine lipid bilayers. The experimental observables
-are chosen since these experiments are robust, well understood, highly reproducible and the connection
-between raw data and simulations is straightforward. Also the comparison between simulations
-and these observables is bidirectionally useful; it will quantitatively measure the quality 
-of the simulation model respect to the reality, and if the quality is sufficient, the simulations
-give structural interpretation for the experimental data. Significant advance of molecular dynamics
-simulation models is that the same simulation model can be simultaneously compared to all of
-this parameters. If satisfactory agreement is found, it is highly likely that the model
-represents the reality due to the large amount of reproduced independent experimental parameters. 
-In this case all the mentioned experiments would be simultaneously interpreted with the same model.
-Phosphatidylcholine lipids are chosen since large portion of model membrane studies have been 
-focused on this lipid, producing enough experimental and simulation data to draw comprehensive
-picture on the level of understanding atomistic resolution structure and dynamics.
-We conclude that the acyl chain region structure and its changes are generally well described in simulations of lipid bilayers, 
-in contrast to the glycerol backbone and choline. Also cation binding is significantly overestimated
-by several models.
-
+Accurate details on the sampled atomistic resolution structures of lipid bilayers can be experimentally
+obtained by measuring C--H bond order parameters, spin relaxation rates and scattering form factors.
+These parameters can be also directly calculated from the classical atomistics resolution molecular dynamics
+simulations (MD) and compared to the experimentally achieved results. This comparison measures
+the simulation model quality respect to the reality, and if the quality is sufficient, the simulation model
+gives structural interpretation for the experimental data. Significant advance of MD 
+models is the joint interpretation of different experiments with the same model.
+Here we focus on phosphatidylcholine lipid bilayers due to largest available datasets, in both experiments and simulations.
+We conclude that the acyl chain region structure and rotational dynamics is generally well described 
+in simulation models, consequently the simulations can be considered as the state of the art model for 
+the lipid bilayer hydrophopic region. Also changes with temperature, dehydration and cholesterol concentration
+are qualitatively correctly reproduced, however, the quality of atomistic resolution structural changes
+is not clear. In contrast, the lipid bilayer properties at the interfacial region, 
+e.g. glycerol backbone and choline structures, and cation binding, are described less 
+accurately in simulations. Thus extreme care must be taken when simulations are applied to understand
+phenomena where interafacial region play a significant role.
 \end{abstract}
 
 %\pacs{}% insert suggested PACS numbers in braces on next line
@@ -99,20 +105,19 @@ by several models.
 
 %\label{}
 \section{Introduction}
-\todo{Citations missing}
 Atomistic resolution structure and dynamics of lipid bilayers has been studied
 with wide range of techniques for many decades motivated mainly
-by their presence and important role in biological systems \cite{israelachvili80,jacobs81,davis83,bloom91,nagle00,??}.
+by their presence and important role in biological systems \cite{israelachvili80,jacobs81,davis83,bloom91,nagle00,nagle13}.
 Lipid bilayers play direct or indirect role in several physiological and pathological
-molecular scale processes \cite{lee04,kinnunen09,??}. To fully understand these processes the atomistic and
+molecular scale processes \cite{lee04,kinnunen09,Bohdanowicz13}. To fully understand these processes the atomistic and
 molecular level understanding of lipids is required. Since atomistic resolution studies are
-extremely difficult for biological membranes, simplified lipid-only systems are often used \cite{??}.
+extremely difficult for biological membranes, simplified lipid-only systems are often used~\cite{seelig77c,israelachvili80,jacobs81,davis83,bloom91,nagle00,nagle13}.
 The biological relevance of these model systems is supported, e.g. by similar NMR order parameters 
-mesured from living cells, lipid extracts and model systems \cite{gally81,scherer87}. 
+mesured from living cells, lipid extracts and model systems \cite{gally81,jacobs81,scherer87}. 
 
 The most detailed information about lipid bilayer atomistic resolution structure and dynamics has been
-achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
-The first one giving direct information on structures sampled by individual lipid molecules \cite{jacobs81,davis83,bloom91,??} and
+achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{seelig77c,jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
+The first one giving direct information on structures sampled by individual lipid molecules \cite{seelig77c,jacobs81,davis83,bloom91} and
 the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst10,kucerka11,marquardt15}.
 Both techniques give robust, accurate and reproducible quantities related to the strucuture and dynamics.
 However, for structural and dynamical interpretation both techniques need to model experimental data to produce 
@@ -169,17 +174,6 @@ the artificial conclusions produced by simulations.
 
 
 \section{C-H bond order parameters as atomistic resolution structural measure}
-
-\todo{The text should be close to final. Figures should be improved.}
-
-%\noindent {\bf Here will be described:}\\[0.1cm]
-
-%\noindent How are the order parameters measured.\\
-%What is the primary experimental observable. \\
-%How accurate are the experimental results. \\
-%How order parameter is calculated from simulations. \\
-%How accurate are the order parameters from simulations. \\
-%What can be learned about the structure when comparing order parameters between experiments and simulations \\[0.5 cm]
 
 \subsection{Definition and properties of C-H bond order parameter}\label{OPdefinition}
 In lipid bilayer systems the order parameter of a hydrocarbon C--H vector is typically defined as 
@@ -730,8 +724,6 @@ and lipid bilayer, simulated in physiological salt concentration~\cite{arkhipov1
 
 \section{C-H bond rotational dynamics from spin relaxation rates and simulations}\label{dynamicsSECTION}
 
-\todo{This should be close to final now. The text and figures should polished though.}
-
 \subsection{Definition and properties of rotational auto--correlation function}
 The second order auto-correlation function for the reorientation of the C--H chemical bond axis is defined as
 \begin{equation}\label{gt}
@@ -986,16 +978,16 @@ itself along the bilayer normal.
 
 Here the main interest lies in the form factor since we focus on the lipid bilayer structure.
 The scattering intensity can be measured from unilamellar vesicles (ULVs)~\cite{marquardt15}, 
-oriented multilamellar bilayes (ORI)~\cite{Lyatskaya.2001,kucerka05} and un-oriented multilamellar vesicles (MLVs)~\cite{Heftberger.2014}.
+oriented multilamellar bilayes (ORI)~\cite{Lyatskaya.2001,kucerka05a} and un-oriented multilamellar vesicles (MLVs)~\cite{Heftberger.2014}.
 Information about the structure factor is needed to extract the 
 form factor from the scattering intensity, except for positionally uncorrelated ULVs, where $S(q)=1$~\cite{marquardt15}. 
 For multibilayers in the fluid phase the structure factor is given by the Caill\'{e} theory~\cite{Zhang.1994,Lyatskaya.2001}. 
 For oriented samples the form factor is determined by scaling a 2D fit of the Caill\'{e} structure factor 
-(for in-plane and out-of-plane scattering constributions) to the measured scattering intensity~\cite{Lyatskaya.2001,kucerka05}.
+(for in-plane and out-of-plane scattering constributions) to the measured scattering intensity~\cite{Lyatskaya.2001,kucerka05a}.
 For MLVs the form factor needs to be modeled in combination with the structure factor to fit the scattering intensity~\cite{Heftberger.2014}. This is achieved by using a specific real-space description of the bilayer structure (scattering length density profile). Note that different real-space model yield equivalent form factors. Thus, the form factors are not highly sensitive to the applied model.
 Different technical issues must be carefully considered in all scattering experiments, in particular 
 subtracting background scattering and, in the case of ORI and MLVs, fitting accuracy. The form factors measured 
-from different geometries~\cite{kucerka05,kucerka07} and research groups are in good agreement
+from different geometries~\cite{kucerka05a,kucerka05b,kucerka07} and research groups are in good agreement
 as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is similar in different preparations of the same lipid and that the technique is highly robust.
 \begin{figure*}[]
 	%  \centering
@@ -1021,7 +1013,7 @@ phospholipid headgroups. Neutron experiments typically explore the contrast betw
 e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the membrane's hydrophobic thickness
 and specifically deutreated lipids are used to study lipid structural details \cite{buldt78,buldt79}.
 Also, e.g. $^{44}$Ca has been used to detect Calcium location in lipid bilayer \cite{herbette84}.
-Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments~\cite{kucerka05,kucerka08a}.
+Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments~\cite{kucerka05a,kucerka08a}.
 
 For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the widely used form
 \begin{equation}\label{FFsimpl}
@@ -1029,15 +1021,15 @@ For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the widely used form
 \end{equation}
 where $\Delta \rho_e(z)$ is the scattering length density difference between solvent and bilayer.
 
-\onecolumngrid
-\todo{Discussion about related issues can be found at:
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/1}}
+%\onecolumngrid
+%\todo{Discussion about related issues can be found at:
+%{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/1}}
 
 
-\todo{The discussion is going in at: 
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/2} 
-}
-\twocolumngrid
+%\todo{The discussion is going in at: 
+%{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/2} 
+%}
+%\twocolumngrid
 
 \subsection{Form factor calculation from simulations}
 The atomic number densities $n_\alpha(z)$ are straighforward to calculate from simulations and
@@ -1058,7 +1050,7 @@ not change the location of form factor minimas but depress the peak hights in th
 Since the undulations are expected to be present in the experiments, the potential discrepancies 
 between simulations and experiments in the lobe heights may be explained by the lack of undulation 
 motions in simulations. The undulation effects are also sometimes reduced from the experimentally 
-reported form factors by scaling $q$ in x--axis, however, the scaling factor is very close to 1~\cite{kucerka05}.
+reported form factors by scaling $q$ in x--axis, however, the scaling factor is very close to 1~\cite{kucerka05a}.
 
 Simulations give the form factors on absolute scale while experiments obtain them only on a relative scale,
 thus the experimental form factors from different sources has to be scaled for comparison~\cite{kucerka08a,kucerka10}.
@@ -1071,13 +1063,13 @@ of the experimental form factor and the summation goes over all $N$ data points~
 %In many studies which compare the form factors between experiments and simulations, the details on the scaling
 %factor used is not given~\cite{??}. 
 
-\onecolumngrid
-\todo{More discussion at: \\
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/3} \\
-and \\
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/4} 
-}
-\twocolumngrid
+%\onecolumngrid
+%\todo{More discussion at: \\
+%{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/3} \\
+%and \\
+%{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/4} 
+%}
+%\twocolumngrid
 
 \subsection{Comparing form factors between simulations and experiments}
 
@@ -1107,7 +1099,7 @@ compared~\cite{benz05}
 
 Also changes in form factor due to temperature~\cite{jambeck12,zhuang14}, cholesterol concentration~\cite{jambeck13,madej15} 
 and acyl chain polyunsaturation~\cite{eldho03,klauda12} have been compared between simulations and 
-experiments~\cite{eldho03,kucerka05,pan08,hodzic08,kucerka08,pan09,khelasvili10,kucerka11}.
+experiments~\cite{eldho03,kucerka05a,pan08,hodzic08,kucerka08,pan09,khelasvili10,kucerka11}.
 Simulation generally reproduce the decreased thickness and increased area with increasing temperature~\cite{jambeck12,zhuang14} and 
 polyunsaturation level~\cite{eldho03,klauda12}, 
 as well as increased thickness and decreased area with increasing cholesterol concentration~\cite{jambeck13,madej15}.
@@ -1146,10 +1138,10 @@ as discussed in section~\ref{OPinterplay}.
 
 
 
-\onecolumngrid
-\todo{The more detailed discussion can be found at: \\
-{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/5}}
-\twocolumngrid
+%\onecolumngrid
+%\todo{The more detailed discussion can be found at: \\
+%{\tt https://github.com/NMRLipids/NMRLipids\_V-Review/issues/5}}
+%\twocolumngrid
 
 
 \section{Conclusions}
@@ -1195,17 +1187,16 @@ main current barrier seems to be quality of the interactions described in the MD
 
 The demand for atomistically accurate MD models will most likely increase in near future with increasing
 amount of accurate experimental data due the development in NMR methodology  
-for lipids \cite{ferreira13,leftin13,leftin14,ferreira15} and proteins \cite{??}, 
+for lipids \cite{ferreira13,leftin13,leftin14,ferreira15} and proteins \cite{hansen15}, 
 as well as due to, e.g. wide-angle x-ray scattering of lipid bilayers, probing short-range positional 
 correlations between hydrocarbons~\cite{spaar.2003}. 
 
-%When applying lipid bilayer simulations to study complicated biochemical systems it is crucial to recognize  
-%potential artefacts arising from the inaccuracies revealed by these comparisons. Hyphotetical example of
-%a situation where artificial conclusions might be difficult to avoid would be study of protein approaching
-%PC lipid bilayer in physiological NaCl concentration. If the above mentioned issues are not carefully taken
-%into account one might choose a model where the protein is approaching an effectively positively charged 
-%lipid bilayer due to artificial Na$ +$ binding with incorrect choline structure. In addition to
-%this the protein might be incorrectly folded already in the bulk water \cite{??}.
+The inaccuracies of simulation models in the interfacial region may also hamper the simulation 
+studies of different biochemical systems. For example, protein approaching
+PC lipid bilayer in physiological NaCl concentration may approach an effectively positively charged 
+lipid bilayer due to artificial Na$^+$ binding with incorrect choline structure. In addition,
+the protein might sample incorrect states already in the bulk water~\cite{best11,beauchamp12,rauscher15}.
+From such a simulation it is difficult to filter results arising purely from simulation artefacts.
 
 
 
