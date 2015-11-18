@@ -72,7 +72,7 @@
 
 \date{\today}
 
-\todo{The text should be close to final now. The figures should polished.}
+\todo{Manuscript should be close to final now.}
 
 
 \begin{abstract}
@@ -470,7 +470,7 @@ shown in Fig.~\ref{qsCACLeffect}.
   \includegraphics[width=8.6cm]{../Fig/QUADsplitCACLeffect.eps}
 \newline
   \caption{\label{qsCACLeffect}
-    Quadrupolar splitting $\Delta \nu_Q$ for $\alpha$ segment in POPC as a function of CaCl$_2$ concentration measured by Altenbach and Seelig~\cite{altenbach84}.
+    Quadrupolar splitting $\Delta \nu_Q$ for $\alpha$ segment in POPC as a function of CaCl$_2$ concentration measured by Altenbach and Seelig~\cite{altenbach84} at 313~K.
     The splitting is related to the order parameter as $S_{{\rm CD}}=0.00784 \times \Delta \nu_Q$. 
     More recent studies show that the $\alpha$ order parameter is positive in the absense of CaCl$_2$~\cite{hong95a,hong95b,gross97}.
     Thus, the most obvious interpertation is that the $\alpha$ order parameter decreases to zero when CaCl$_2$ concentration reaches 2.0M, and 
@@ -564,12 +564,12 @@ however, the cholesterol acyl chain exhibits too low order parameters in the Ber
 based model \cite{ferreira13} and too much forking in Amber Lipid14~\cite{madej15}, while CHARMM36 reproduces experiments well~\cite{lim12}. 
 \begin{figure*}[]
 %  \centering
-  \includegraphics[width=8.6cm]{../Fig/cholTAILmadej.eps}
+  \includegraphics[width=17.2cm]{../Fig/cholTAILmadej.eps}
 \newline
   \caption{\label{cholTAILmadej}
-    Cholesterol effect on acyl chain order parameters compared between ? model \cite{madej15} and experiments \cite{ferreira13}.
-    The agreement with experiments with this model is significanly better than Beger/H{\"o}ltje based model compared by 
-    Ferreira et al. \cite{ferreira13}.
+    Cholesterol effect on acyl chain order parameters compared between the Amber Lipid14 model~\cite{madej15} and experiments~\cite{ferreira13}
+    showing significantly better agreement than Berger/H{\"o}ltje based model compared by Ferreira et al. \cite{ferreira13} to the same experimental data.
+    Figure adapted from~\cite{madej15}. 
   } 
 \end{figure*}
 
@@ -581,7 +581,7 @@ is usually well reproduced, as demonstrated in Fig. \ref{polyunsat} for Berger~\
 Also difference between {\it cis} and {\it trans} double bonds can be reproduced in MD simulations \cite{kulig15b}.
 \begin{figure}[]
 %  \centering
-  \includegraphics[width=8.6cm]{../Fig/polyunsat.eps}
+  \includegraphics[width=7.5cm]{../Fig/polyunsat.eps}
 \newline
   \caption{\label{polyunsat}
    Figure comparing order parameters in polyunsaturated acyl chains between simulations and 
@@ -627,9 +627,9 @@ as also demonstrated in Fig.~\ref{changesDUEna}.
 The effect of cholesterol on glycerol backbone and choline is overestimated
 by the Berger/H{\"o}ltje based \cite{ferreira13} and Amber Lipid14 \cite{madej15} models 
 while CHARMM36 and MacRog performed better~\cite{botan15}. 
-\begin{figure}[]
+\begin{figure*}[]
 %  \centering
-  \includegraphics[width=8.6cm]{../Fig/changesDUEna.eps}
+  \includegraphics[width=17.2cm]{../Fig/changesDUEna.eps}
 \newline
   \caption{\label{changesDUEna}
     Changes in choline order parameters (left column) and ion density distributions (right column)
@@ -640,7 +640,7 @@ while CHARMM36 and MacRog performed better~\cite{botan15}.
     Consequently, the results show that Na$^+$ partition is significantly overestimated in the Berger model. 
     For more discussion see \cite{ionpaper}.
   } 
-\end{figure}
+\end{figure*}
 
 In conclusion, the acyl chain order parameters and their qualitative changes are 
 generally well described in atomistic MD models, except for C$_2$ segment in {\it sn}-2.
@@ -991,10 +991,11 @@ from different geometries~\cite{kucerka05a,kucerka05b,kucerka07} and research gr
 as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is similar in different preparations of the same lipid and that the technique is highly robust.
 \begin{figure*}[]
 	%  \centering
-	\includegraphics[width=10.6cm]{../Fig/FFs.eps}
+	\includegraphics[width=17.2cm]{../Fig/FFs.eps}
 	\caption{\label{FFs}
-		Comparison of reported X-ray (Panel A) and neutron (Panel B) form factors for POPC bilayers at 303K in different geometries
-                measured in different groups.
+		Comparison of reported X-ray (left panel) and neutron (right panel) form factors for POPC bilayers at 303K in different geometries
+                measured by different groups: Heftberger et al. (2014)~\cite{Heftberger.2014}, Kucerka et al. (2011)~\cite{kucerka11} and Kucerka et al. (2005)~\cite{kucerka05b}.
+                The error bars given for neutron data by Kucerka et al. (2011)~\cite{kucerka11} are the same size as the line width.
 	} 
 \end{figure*}
 
@@ -1088,11 +1089,11 @@ for simulated form factor quality has been suggested~\cite{kucerka10}. In some s
 compared~\cite{benz05}
 \begin{figure*}[]
 %  \centering
-  \includegraphics[width=10.6cm]{../Fig/FFcompMADEJ.eps}
+  \includegraphics[width=17.2cm]{../Fig/FFcompMADEJ.eps}
 \newline
   \caption{\label{FFcomp}
-    Example of comparison between simulation model and experiment.
-    The agreement is better with low $q$ values and cholesterol induced thickening is overestimated.
+    Example comparison between Amber Lipid14 simulation model~\cite{madej15} and experiments~\cite{pan09,kucerka07b}.
+    The agreement is better with low $q$ values of x-ray form factor and cholesterol induced thickening is overestimated.
     Figure adapted from Madej et al.~\cite{madej15}.
   } 
 \end{figure*}
