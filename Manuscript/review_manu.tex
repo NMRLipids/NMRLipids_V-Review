@@ -82,9 +82,10 @@ obtained by measuring C--H bond order parameters, spin relaxation rates and scat
 These parameters can be also directly calculated from the classical atomistics resolution molecular dynamics
 simulations (MD) and compared to the experimentally achieved results. This comparison measures
 the simulation model quality respect to the reality, and if the quality is sufficient, the simulation model
-gives structural interpretation for the experimental data. Significant advance of MD 
+gives structural and dynamical interpretation for the experimental data. Significant advance of MD 
 models is the joint interpretation of different experiments with the same model.
-Here we focus on phosphatidylcholine lipid bilayers due to largest available datasets, in both experiments and simulations.
+Here we particularly focus on the atomistic resolution structure of phosphatidylcholine lipid bilayers 
+due to the large available datasets, in both experiments and simulations.
 We conclude that the acyl chain region structure and rotational dynamics is generally well described 
 in simulation models, consequently the simulations can be considered as the state of the art model for 
 the lipid bilayer hydrophopic region. Also changes with temperature, dehydration and cholesterol concentration
@@ -107,7 +108,7 @@ phenomena where interafacial region play a significant role.
 \section{Introduction}
 Atomistic resolution structure and dynamics of lipid bilayers has been studied
 with wide range of techniques for many decades motivated mainly
-by their presence and important role in biological systems \cite{israelachvili80,jacobs81,davis83,bloom91,nagle00,nagle13}.
+by their presence and important role in biological systems \cite{seelig77c,israelachvili80,jacobs81,davis83,bloom91,nagle00,nagle13}.
 Lipid bilayers play direct or indirect role in several physiological and pathological
 molecular scale processes \cite{lee04,kinnunen09,Bohdanowicz13}. To fully understand these processes the atomistic and
 molecular level understanding of lipids is required. Since atomistic resolution studies are
@@ -120,8 +121,8 @@ achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques 
 The first one giving direct information on structures sampled by individual lipid molecules \cite{seelig77c,jacobs81,davis83,bloom91} and
 the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst10,kucerka11,marquardt15}.
 Both techniques give robust, accurate and reproducible quantities related to the strucuture and dynamics.
-However, for structural and dynamical interpretation both techniques need to model experimental data to produce 
-the measured quantities \cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
+However, for structural and dynamical interpretation both techniques needs a model reproducing
+the measured quantities~\cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
 
 On the other hand, remarkable progress in hardware and software allows to 
 routinely perform classical atomistic resolution molecular dynamics (MD) simulations of lipid bilayer with 
@@ -145,7 +146,7 @@ i.e. order parameters, spin relaxation rates and form factor, the simulation can
 as an ultimate model giving interpretation for all these experiments simulatenously.
 In addition, it would be the correct atomistic resolution representation of the system with high
 probability since it reproduces large amount of independetly measured experimental parameters 
-simultaneously. Thus, usage of the model for further specific questions and applications would be well justified.
+simultaneously. Thus, the usage of the model for further specific questions and applications would be well justified.
 
 Here we discuss comparisons of order parameters, spin relaxation rates
 and scattering form factors between simulations and experiments in order to quantify the 
@@ -205,7 +206,7 @@ If and only if the experimental order parameters are
 reproduced, the sampled structures can be considered as a realistic
 atomistic resolution representation and used to interpretate experimental order parameters.
 Before MD simulations were feasible for such usage, other models have been used for 
-this interpretation~\cite{seelig74,gally75,seelig77,seelig78,strenk85,baenziger91,hong95b,bruzik97}.
+this interpretation~\cite{seelig74,gally75,seelig77,seelig78,jacobs81,davis83,bloom91,strenk85,baenziger91,hong95b,bruzik97}.
 It is important to note, however, that reproduction of the order parameters does not absolutely 
 guarantee that the sampled structures are correct since several structural models 
 can produce the same order parameters, in principle. 
@@ -226,9 +227,9 @@ are experimentally available. Consequently, a realistic atomistic resolution mod
 for example, for POPC molecule (see Fig.~\ref{allOPs} B)) in liquid crystalline bilayer has to reproduce 82 experimental order parameter values.
 If these parameters are not reproduced for certain segments, the model deficiencies are easy to localize
 since the segmental order parameter is a very local quantity depending only on the position of two atoms (C-H pair).
-This is an advance over several other accurately measured NMR quantities  
+This is an advance over several other accurately measured NMR quantities and scattering form factors  
 %like $^{31}$P chemical shift anisotropy~\cite{chowdhary13} and $^{31}$P-$^{13}$C dipolar couplings~\cite{prakash10}
-depending on the position of several atoms \cite{prakash10,chowdhary13}, thus complicating the localization of structural differences 
+depending on the position of several atoms \cite{prakash10,chowdhary13,kucerka10}, thus complicating the localization of structural differences 
 in the case of disagreement between model and experiments.
 \begin{figure*}[]
 %  \centering
@@ -274,7 +275,7 @@ The amount of data, especially from $^{13}$C NMR, has been also increasing of la
 Further, changes of order parameters for all lipid segments have been measured various experimental
 different conditions, like temperature \cite{seelig74,gally75,seelig77,douliez95}, 
 hydration level \cite{bechinger91,ulrich94,mallikarjunaiah11,dvinskikh05a} and in the presense 
-of ions, charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
+of charged objects~\cite{akutsu81,altenbach84,seelig87,scherer89}, 
 cholesterol \cite{brown78,douliez95,ferreira13,leftin14} and proteins \cite{kuchinka89,roux90,leftin13}.
 Since the comparison of order parameter responses between experiments and simulations
 has not been much utilized, we will exemplify its potential by showing
@@ -297,7 +298,7 @@ in $^2$H NMR experiments through the equation
 \end{equation}
 where $e$ is the elementary charge, $Q$ is the deuteron quadrupole moment and $h$ is the Planck's constant. 
 The parameter $q$ is related to the largest electric field gradient and in practise its value is not known; 
-therefore the static quadrupolar coupling constant $\frac{e^2qQ}{h}$ is defined, and its is value measured for 
+therefore the static quadrupolar coupling constant $\frac{e^2qQ}{h}$ is defined, and its value is measured for 
 different compounds in their solid state ($\Delta \nu_Q$ measurement from the system where order parameter is known to be 1). 
 The value measured for different alkenes, $\frac{e^2qQ}{h}$=170 kHz is typically used in 
 C-D order parameter measurements for lipids. The relation between order parameters 
@@ -309,7 +310,7 @@ For $^2H$ NMR measurements the CH$_2$ segments have to be labeled with deuterium
 This can be done specifically for a certain segment or for the several segments
 simultaneously~\cite{davis83,bloom91,leftin11}. In the first case, it is known that the measured
 order parameter (quadrupolar splitting) is related to the labeled segment.
-In the latter case several order parameters (quadrupolar splittings) are
+In the latter case several order parameters (quadrupolar splittings) are simultaneously
 measured which arise from all the labeled segments, however, it is not known 
 which order parameter belongs to which CH$_2$ segment. Majority of the $^2H$ NMR data
 in the literature are measured using samples with perdeuterated acyl chains \cite{leftin11,marsh13}
@@ -1107,7 +1108,7 @@ as well as increased thickness and decreased area with increasing cholesterol co
 However, the temperature dependence is underestimated for some systems~\cite{jambeck12,zhuang14} while cholesterol
 effect is overestimated~\cite{jambeck13,madej15}. Example of such comparison is shown in Fig. \ref{FFcomp}.
 Atomistic resolution simulations have not been able to reproduce the special cholestrol orientation, lying flat in
-the middle of polyunsaturated lipid bilayer, as observed with neutron scattering~\cite{harroun08,marrink07,kucerka10b}.
+the middle of polyunsaturated lipid bilayer, as observed with neutron scattering~\cite{harroun08,marrink08,kucerka10b}.
 
 In conclusion, all the state of the art simulation models gives form factors close to experimental
 data in various conditions indicating reasonable agreement for average bilayer dimensions. Also the qualitative changes are reproduced, however, 
@@ -1141,7 +1142,7 @@ as discussed in section~\ref{OPinterplay}.
 
 More accurate understanding on the quality of interactions in lipid mixtures, e.g. with cholesterol is needed 
 to use the simulations to interpret the scattering data from multicomponent systems~\cite{heftberger15} or the special
-cholesterol orientation in polyunsaturated bilayers~\cite{harroun08,marrink07,kucerka10b}.
+cholesterol orientation in polyunsaturated bilayers~\cite{harroun08,marrink08,kucerka10b}.
 
 %\onecolumngrid
 %\todo{The more detailed discussion can be found at: \\
