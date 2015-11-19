@@ -98,7 +98,7 @@ phenomena where the interafacial region plays a significant role.
 
 %\label{}
 \section{Introduction}
-Atomistic resolution structure and dynamics of lipid bilayers has been studied
+Atomistic resolution structure and dynamics of lipid bilayers have been studied
 with wide range of techniques for many decades motivated mainly
 by their presence and important role in biological systems \cite{seelig77c,israelachvili80,jacobs81,davis83,bloom91,nagle00,nagle13}.
 Lipid bilayers play direct or indirect role in several physiological and pathological
@@ -112,7 +112,7 @@ The most detailed information about lipid bilayer atomistic resolution structure
 achieved with various Nuclear Magnetic Resonance (NMR) and scattering techiques \cite{seelig77c,jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
 The first one giving direct information on structures sampled by individual lipid molecules \cite{seelig77c,jacobs81,davis83,bloom91} and
 the latter one giving complementary information on average bilayer properties, like e.g. area per lipid or bilayer thickness \cite{nagle00,pabst10,kucerka11,marquardt15}.
-Both techniques give robust, accurate and reproducible quantities related to the strucuture and dynamics.
+Both techniques give robust, accurate and reproducible quantities related to the structure and dynamics.
 However, for structural and dynamical interpretation both techniques needs a model reproducing
 the measured quantities~\cite{jacobs81,davis83,bloom91,nagle00,pabst10,kucerka11,marquardt15}. 
 
@@ -123,15 +123,15 @@ conformations with realistic speed in these simulations. This can be verified by
 directly measurable quantities from simulations and comparing these to experimental values.
 Here we review such comparisons for different experimental observables: C--H bond order parameters,
 spin relaxation times and form factor. The first and second parameters are measured with NMR. Hence, they 
-represent to structure and dynamics sampled by individual lipid molecules, respectively.
+represent the structure and dynamics sampled by individual lipid molecules, respectively.
 The third quantitiy is obtained from elastic X-ray or neutron scattering experiments and encodes the overall structural bilayer properties.
 
 The order parameters and spin lattice relaxation times have been compared between simulations
 and experiments for validation and interpretation since the early days of lipid MD simulations \cite{ploeg82,pastor88}.
 On the other hand, scattering form factors for lipid bilayers have been replacing the 
 comparisons of simulations to the experimental area per molecule during the last decade
-since form factor is directly measurable quantity while area per molecule value depends on
-model used to analyze the scattering data \cite{nagle00}.
+since form factors are directly measurable quantities while values for area per molecule value depend on
+specific models used to analyze the scattering data~\cite{nagle00}.
 
 If an atomistic resolution model reproduces all the above mentioned experimental parameters,
 i.e. order parameters, spin relaxation rates and form factor, the simulation can be considered
@@ -161,7 +161,7 @@ headgroups present in biological systems, the chemical and structural details of
 region are expected to be relevant in several biochemical processes. For example, 
 cell membrane interactions with ions, drug molecules and proteins may be regulated by these
 details. Here we demonstrate how atomistic resolution model quality can be estimated to minimize 
-the artificial conclusions produced by simulations.
+potential artificial conclusions produced by simulations.
 
 
 
@@ -1006,7 +1006,7 @@ X-ray photons interact with the sample's electron cloud, while neutron scatter o
 This leads also to distinct contrast for different parts of the membrane. X-rays, for example are most sensitive to the electron-rich 
 phospholipid headgroups. Neutron experiments typically explore the contrast between hydrogen and deuterium~\cite{marquardt15},
 e.g. SANS on protiated lipid bilayers suspended in 100\% D$_2$O probes mainly the membrane's hydrophobic thickness
-and specifically deutreated lipids are used to study lipid structural details \cite{buldt78,buldt79}.
+and specifically deuterated lipids are used to study lipid structural details \cite{buldt78,buldt79}.
 Also, e.g. $^{44}$Ca has been used to detect Calcium location in lipid bilayer \cite{herbette84}.
 Consequently, highest-structural resolution can be achieved upon combining SAXS and SANS experiments~\cite{kucerka05a,kucerka08a}.
 
@@ -1162,8 +1162,8 @@ Further, such a model reproducing numerous independent experimental observables
 could be  considered as the realistic atomistic resolution representation with high
 probability. 
 
-The current MD simulation models are not quite yet cabable for this,
-however, with current computational resources and available experimental
+The current MD simulation models are yet not quite cabable of achieving this goal.
+However, with current computational resources and available experimental
 data the community has a fair change to create truly realistic atomistic resolution 
 representations of lipid bilayers. More specifically: \\
 - Atomistic resolution MD simulations give realistic structures and rotational dynamics
@@ -1183,22 +1183,22 @@ of individual molecules and the latter to the average bilayer properties.
 In wider perspective it seems that atomistic MD simulations, NMR spectroscopy and scattering all gives
 complementary and coherent information on atomistic resolution biomolecular structure and dynamics. 
 This indicates that the combination of these techniques has a realistic potential to generate atomistic 
-resolution dynamical models of biomolecules in biologically relevant fluid state, however, the
-main current barrier seems to be quality of the interactions described in the MD model.
+resolution dynamical models of biomolecules in biologically relevant fluid state. However, the
+main barrier that currently needs to be overcome seems to be the quality of the interactions described in MD models.
 
 The demand for atomistically accurate MD models will most likely increase in near future with increasing
 amount of accurate experimental data due the development in NMR methodology  
 for lipids \cite{ferreira13,leftin13,leftin14,ferreira15} and proteins \cite{hansen15}, 
-as well as due to, e.g. wide-angle x-ray scattering of lipid bilayers, probing short-range positional 
+as well as due to the availability, e.g. wide-angle x-ray scattering of lipid bilayers, probing short-range positional 
 correlations between hydrocarbons~\cite{spaar.2003}. 
 
 The inaccuracies of simulation models in the interfacial region may also hamper the simulation 
-studies of different biochemical systems. For example, protein approaching
-PC lipid bilayer in physiological NaCl concentration may approach an effectively positively charged 
+studies of different biochemical systems. For example, proteins approaching
+PC lipid bilayer in physiological NaCl concentration may encounter an effectively positively charged 
 lipid bilayer due to artificial Na$^+$ binding with incorrect choline structure. In addition,
 the protein might sample incorrect states already in the bulk water~\cite{best11,beauchamp12,rauscher15}.
 From such a simulation it is difficult to filter results arising purely from simulation artefacts.
-
+Thus, improvements of force fields underlying MD simulations are strongly encouraged.
 
 
 
