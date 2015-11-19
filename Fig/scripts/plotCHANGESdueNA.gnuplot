@@ -26,7 +26,7 @@ plot "../../../lipid_ionINTERACTION/Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchang
 unset ylabel
 unset ytic
 set label at screen 0.85,screen 0.73 "Density profiles of ions and lipids"
-set key at screen 1.3,screen 0.69 maxcols 2 maxrows 5
+set key at screen 1.0,screen 0.69 maxcols 2 maxrows 5
 set y2range [0:0.79]
 set yrange [0:0.79]
 set xrange [-5:5]
@@ -35,7 +35,7 @@ set xtic 1
 set origin 0.75,0.30
 set size 0.75, 0.35
 set y2label "Number Density"
-set label at screen 0.95,screen 0.6 "Berger (340 mM NaCl)"
+set label at screen 0.87,screen 0.6 "Berger (POPC, 340 mM NaCl)"
 plot  "../../../lipid_ionINTERACTION/Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:3 title 'Na' with lines linetype 1 lw 2, \
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:4 title 'Cl' with lines linetype 2 lw 1 lc rgb 'red', \
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/BERGER/44na/LIPIDdensity.xvg" using 1:($2/100) title 'POPC' with lines linetype 1 lc rgb 'black' lw 3
@@ -62,7 +62,7 @@ plot "../../../lipid_ionINTERACTION/Data/DPPC/NaCl/EXP-Akutsu1981-DPPC-NaClchang
 
 unset ylabel
 unset ytic
-set key at screen 1.3,screen 0.72 maxcols 2 maxrows 6
+set key at screen 1.3,screen 0.69 maxcols 2 maxrows 5
 set yrange [0:0.79]
 set y2tic 0.2
 set xtic 1
@@ -71,15 +71,15 @@ set xlabel "z (nm)"
 set y2label "Number Density"
 set origin 0.75,0
 set size 0.75, 0.35
-set label at screen 0.99,screen 0.3 "CHARMM36"
+set label at screen 0.93,screen 0.3 "CHARMM36 (POPC)"
 set label at screen 1.21,screen 0.14 "350 mM" 
 set label at screen 1.21,screen 0.21 "690 mM" 
 set label at screen 1.21,screen 0.29 "950 mM" 
 plot  "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 2 lc rgb 'green', \
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 2 lw 1 lc rgb 'green', \
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/13na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
-      "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/26na/LIPIDdensity.xvg" using 1:3 notitle  with lines linetype 1 lw 3 lc rgb 'green',\
-      "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/26na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 2 lw 2 lc rgb 'green', \
+      "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/26na/LIPIDdensity.xvg" using 1:3 title 'Na' with lines linetype 1 lw 3 lc rgb 'green',\
+      "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/26na/LIPIDdensity.xvg" using 1:4 title 'Cl' with lines linetype 2 lw 2 lc rgb 'green', \
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/26na/LIPIDdensity.xvg" using 1:($2/200) notitle with lines linetype 1 lc rgb 'black' lw 3,\
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/37na/LIPIDdensity.xvg" using 1:3 notitle with lines linetype 1 lw 4 lc rgb 'green',\
       "../../../lipid_ionINTERACTION/Data/POPC/NaCl/CHARMM36/37na/LIPIDdensity.xvg" using 1:4 notitle with lines linetype 2 lw 3 lc rgb 'green', \

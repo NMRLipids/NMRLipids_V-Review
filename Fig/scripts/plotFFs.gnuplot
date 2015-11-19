@@ -21,7 +21,7 @@ plot  "../../Data/formfactor_SAXS_MLV_Peter.dat"  using 1:2 title 'MLVs; Heftber
       "" using 1:2 with line title 'ULV; Kucerka et al. (2011)' linetype 1 lw 2 lc rgb 'green', \
       "../../Data/POPC_ORI_30C_in0D_Kucerka_2006.xff" using 1:2:3 every 50 with yerrorbars notitle pt 0 lt 1 lw 2, "" using 1:2 with line title 'Oriented; Kucerka et al. (2005)'  linetype 1 lw 2
 
-set label at screen 0.78,screen 0.49 "Neutron form factors (POPC, T=303K)"
+set label at screen 0.72,screen 0.49 "Neutron form factors (POPC, 100% D_2O, T=303K)"
 set key at screen 1.24,screen 0.48 maxcols 2 maxrows 5
 set yrange [-0.5:2.6]
 set y2range [-0.5:2.6]
