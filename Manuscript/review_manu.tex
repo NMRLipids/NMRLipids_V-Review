@@ -55,7 +55,7 @@
 %\homepage[]{Your web page}
 %\thanks{}
 %\altaffiliation{}
-\affiliation{Aalto University}
+\affiliation{Department of Neuroscience and Biomedical Engineering, Aalto University}
 
 \author{Georg Pabst}
 %\homepage[]{Your web page}
@@ -85,7 +85,9 @@ Here we focus on phosphatidylcholine lipid bilayers, which out of all model memb
 From the applied comparisons we conclude that the acyl chain region structure and rotational dynamics is generally well described in simulation models.  Also changes with temperature, dehydration and cholesterol concentration
 are qualitatively correctly reproduced. However, the quality of the underlying atomistic resolution structural changes is uncertain. Even worse, when focusing on the lipid bilayer properties at the interfacial region, 
 e.g. glycerol backbone and choline structures, and cation binding, many simulation models produce an inaccurate description of experimental data. Thus extreme care must be applied when simulations are applied to understand
-phenomena where the interafacial region plays a significant role.
+phenomena where the interfacial region plays a significant role.
+This work is done by the NMRlipids Open Collaboration project running at \url{nmrlipids.blogspot.fi}
+and \url{https://github.com/NMRLipids}. 
 \end{abstract}
 
 %\pacs{}% insert suggested PACS numbers in braces on next line
@@ -228,14 +230,16 @@ in the case of disagreement between model and experiments.
   \includegraphics[width=17.2cm]{../Fig/allOPs.eps}
   \caption{\label{allOPs}
     A)  Order parameters from simulations and experimens for phosphatidylcholine headgroup and glycerol 
-    backbone segments adapted from Botan et al.~\cite{botan15}. The blue shaded regions show the
+    backbone segments~\cite{botan15}. The blue shaded regions show the
     subjective sweetspots where the simulation data should fall to agree with experiments, 
-    based on estimated quantitative accuracy of order parameter measurements by Botan et al.
+    based on estimated quantitative accuracy of order parameter measurements by Botan et al.~\cite{botan15}.
+    Adapted with permission from Botan et al. J. Phys. Chem. B. DOI:10.1021/acs.jpcb.5b04878 Copyright 2015 American Chemical Society.
     B) Chemical structure of 1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
     C) Order parameters $|S_{{\rm CH}}|$ for POPC acyl chains 
     from $^1$H-$^{13}$C NMR at 300K (black dots)~\cite{ferreira13},
     from $^2$H NMR at 300K (blue triangles, literature)~\cite{seelig78,perly85} and 
     from MD simulations at 298K (red dots)~\cite{ferreira13}.
+    Adapted from Ref.~\cite{ferreira13} with permission from the PCCP Owner Societies. 
     The experimental values shown in A):
     DMPC 303~K \cite{gross97},
     DMPC 314~K \cite{dvinskikh05a},
@@ -402,6 +406,7 @@ The results demonstrate the systematic changes only slightly above 0.01 units ca
   \caption{\label{opIONeffect}
     A) Quadrupolar splittings of DPPC $\alpha$ and $\beta$ segments as a function of different 
     ion concetrations measured by Akutsu and Seelig with $^2$H NMR~\cite{akutsu81}. 
+    Adapted with permission from Akutsu et al. Biochemistry {\bf 1981}, 20, 7366-7373. Copyright 1981 American Chemical Society.
     B) The measured quadrupolar splittings with NaCl and CaCl$_2$ translated to order parameters ($S_{{\rm CD}}=0.00784 \times \Delta \nu_{{\rm Q}}$). 
     The negative sign for $\beta$ order parameter is assigned according to more recent experiments~\cite{hong95a,hong95b,gross97} 
     (see also Ref.~\cite{botan15} and Section~\ref{signSECTION}). These changes were later shown to be consistent with the 
@@ -562,7 +567,7 @@ based model \cite{ferreira13} and too much forking in Amber Lipid14~\cite{madej1
   \caption{\label{cholTAILmadej}
     Cholesterol effect on acyl chain order parameters compared between the Amber Lipid14 model (black squares)~\cite{madej15} and experiments (red circles)~\cite{ferreira13}
     showing significantly better agreement than Berger/H{\"o}ltje based model compared by Ferreira et al. \cite{ferreira13} to the same experimental data.
-    Figure adapted from~\cite{madej15}. 
+    Reprinted with permission from Madej et al. {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
   } 
 \end{figure*}
 
@@ -577,8 +582,7 @@ Also difference between {\it cis} and {\it trans} double bonds can be reproduced
   \includegraphics[width=7.5cm]{../Fig/polyunsat.eps}
 \newline
   \caption{\label{polyunsat}
-   Figure comparing order parameters in polyunsaturated acyl chains between simulations and 
-   experiments adapted from~\cite{ollila07a}.
+   Figure comparing order parameters in polyunsaturated acyl chains between simulations and experiments~\cite{ollila07a}.
    Order parameters for the sn-1 (squares) and sn-2 (triangles)
    chains of (A) DPPC, (B) POPC, (C) PLPC, (D) PAPC, and (E) PDPC.
    Simulation results are shown in full black, and experimental results
@@ -600,6 +604,7 @@ Also difference between {\it cis} and {\it trans} double bonds can be reproduced
    Rajamoorthi et al. \cite{rajamoorthi91}. For the sn-1 chain the monotonic decrease through
    the acyl chain is expected. For the sn-2 chain, values are fitted such
    that the agreement is as good as possible.
+   Reprinted with permission from Ollila et al. J. Phys. Chem. B, {\bf 2007}, 111, 3139-3150. Copyright 2007 American Chemical Society.
   } 
 \end{figure}
 
@@ -760,7 +765,7 @@ is illustrated in Fig.~\ref{correlationF}.
     illustrating the decay towards $S^2_{{\rm CH}}$ (x--axis with linear scale). 
     This represents the $g(\tau)_f$ in Eq.~\ref{corrF} and decrease to the plateau in the top figure.
     The effective correlation time $\tau_e$ is equal to the area in gray scaled by $(1-S^2_{{\rm CH}})^{-1}$.
-    Figure adapted from \cite{ferreira15}.
+    Reprinted with permission from Ref.~\cite{ferreira15}. Copyright 2015 AIP Publishing LLC.
   } 
 \end{figure}
 
@@ -824,7 +829,7 @@ Since all the atom coordinates as a function of time are available from molecula
 the auto--correlation function for each C--H bond can be calculated directly from the definition in Eq.~\ref{gt}.
 The hydrogen positions can be generated post-simulationally based on heavy atoms 
 positions and the known hydrocarbon geometries for united atom simulations without explicit hydrogens 
-by creating a trajectory with added hydrogens~\cite{lindahl01,wohlert06,ollila07a,ferreira15}. 
+by creating a trajectory with added hydrogens~\cite{lindahl01,wohlert06a,ollila07a,ferreira15}. 
 The ensemble average is taken over all the time intervals and molecules 
 in present in simulation. Since the amount of data decreases for time intervals approaching the simulation total length,
 only interval lengths less than half of the total simulation time are typically used; for more details see~\cite{gromacsMANUAL}.
@@ -834,9 +839,9 @@ the spectral density must be first calculated from auto-correlation function usi
 Usually sum of 4 or more exponentials are fitted to the calculated auto--correlation function and then 
 analytical Fourier transform is used to calculate the spectral 
 density~\cite{pastor88,venable93,pastor02,eldho03,ollila07a,ferreira15},
-however some authors have also used streched exponential exponential functions~\cite{lindahl01,wohlert06}.
+however some authors have also used streched exponential exponential functions~\cite{lindahl01,wohlert06a}.
 The chosen functional form should not affect the spin relaxation rate values as long as the fit is good, however 
-the correct form to describe the real relaxation process can be debated~\cite{leftin11,wohlert06,edholm08,klauda08a,klauda08c}. 
+the correct form to describe the real relaxation process can be debated~\cite{leftin11,wohlert06a,edholm08,klauda08a,klauda08c}. 
 Single exponential function is not enought to describe relaxation observed in simulations while 4 gives a reasonable 
 fit~\cite{eldho03} which is not surprising since more than one relaxation timescales are expected to be present in bilayer
 lipids~\cite{pastor88,venable93,pastor02,leftin11}. The $R_{1}^{C}$ and $R_{1}^{D}$ values are straighforward to
@@ -861,8 +866,9 @@ $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{fer
 \newline
   \caption{\label{RdispersionCHARMM}
     Comparison of $R_1^{C}$ dependence on magnetic field between experiments~\cite{brown83,klauda08a} and different CHARMM simulations~\cite{klauda10} 
-    for acyl chain carbons (DPPC bilayer in 323K) adapted from~\cite{klauda10}.
+    for acyl chain carbons (DPPC bilayer in 323K).
     Experiments as points; MD simulations as solid and dashed lines; and a model-free fit to the vesicle data as dotted lines. 
+    Reprinted with permission from Klauda et al. J. Phys. Chem. B, {\bf 2010}, 114, 7830-7843. Copyright 2010 American Chemical Society.
      } 
 \end{figure}
 \begin{figure}[]
@@ -871,14 +877,16 @@ $g_s(t)$~\cite{feller99}, while 4.2~ms was measured by Ferreira et al.~\cite{fer
 \newline
   \caption{\label{RandEFFCT}
     Comparisons between Berger based models and experimental spin relaxation rates:
-    A) $R_1^{D}$ dependence on magnetic field for acyl chain carbons (DMPC bilayer at 300K) adapted from~\cite{wohlert06},
+    A) $R_1^{D}$ dependence on magnetic field for acyl chain carbons (DMPC bilayer at 300K)~\cite{wohlert06a}.
+    Reprinted with permission from Ref.~\cite{wohlert06a}. Copyright 2006 AIP Publishing LLC.
     B) $R_1^{C}$ measured with field strength correspondin to the Larmor frequency of 125 MHz for $^{13}$C (POPC bilayer at 298K) and
-    C) effective correlation times $\tau_e$ (POPC bilayer at 298K) adapted from Ferreira et al.~\cite{ferreira15}.
+    C) effective correlation times $\tau_e$ (POPC bilayer at 298K). 
+    Reprinted with permission from Ref.~\cite{ferreira15}. Copyright 2015 AIP Publishing LLC.
   } 
 \end{figure}
 
 Spin relaxation rates $R_1^{C}$ and $R_1^{D}$ with one~\cite{feller02,eldho03,ollila07a,klauda08b,ferreira15} 
-or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06,klauda12} external magnetic field 
+or more ~\cite{pastor88,lindahl01,pastor02,klauda08a,klauda08b,wohlert06a,klauda12} external magnetic field 
 strengths have been compared between experiments and simulations mainly for CHARMM (Fig. \ref{RdispersionCHARMM}) 
 and Berger based models (Fig. \ref{RandEFFCT}). The comparison with several
 magnetic field strengths shows good a agreement with large larmor frequencies 
@@ -1086,7 +1094,7 @@ compared~\cite{benz05}
   \includegraphics[width=17.2cm]{../Fig/FFcompMADEJ.eps}
 \newline
   \caption{\label{FFcomp}
-    Comparison of experimental~\cite{pan09,kucerka07b} and simulated (using Amber Lipid14 ~\cite{madej15}) X-ray and neutron form factors for pure DOPC bilayers and DOPC/cholesterol ($x_{chol} = 30$ mol\%) mixtures. Within experimental uncertainty, simulations argee well with neutron data. For X-ray data, simulations match well DOPC experimental data at low $q$, but are slightly off for the third lobe, indicating  some differences in the lipid bilayer fine structure. The DOPC/cholesterol mixture clearly shows disagreement between model and experiment for $q > 0.3$\AA$^{-1}$. Overall, the simulated form factor minima are shifted toward lower $q$, revealing an overestimated bilayer thickening effect of cholesterol. Figure adapted from Madej et al.~\cite{madej15}.
+    Comparison of experimental~\cite{pan09,kucerka07b} and simulated (using Amber Lipid14 ~\cite{madej15}) X-ray and neutron form factors for pure DOPC bilayers and DOPC/cholesterol ($x_{chol} = 30$ mol\%) mixtures. Within experimental uncertainty, simulations argee well with neutron data. For X-ray data, simulations match well DOPC experimental data at low $q$, but are slightly off for the third lobe, indicating  some differences in the lipid bilayer fine structure. The DOPC/cholesterol mixture clearly shows disagreement between model and experiment for $q > 0.3$\AA$^{-1}$. Overall, the simulated form factor minima are shifted toward lower $q$, revealing an overestimated bilayer thickening effect of cholesterol. Reprinted with permission from Madej et al. {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
   } 
 \end{figure*}
 
@@ -1215,6 +1223,11 @@ Thus, improvements of force fields underlying MD simulations are strongly encour
 
 % If you have acknowledgments, this puts in the proper section head.
 \begin{acknowledgments}
+This work is done by the NMRlipids Open Collaboration project running at \url{nmrlipids.blogspot.fi}
+and \url{https://github.com/NMRLipids}. 
+We acknowledge Nobert ku{\v c}erka and Frederick Heberle for sharing data for Fig.~\ref{FFs}. 
+Markus Miettinen and Peter Heftberger are acknowleded for useful comments.
+O.H.S.O. acknowledges financial support by the Emil Aaltonen Foundation.
 G.P. acknowledges financial support by the Austrian Science Funds (FWF), grant no.~P24459.
 \end{acknowledgments}
 
