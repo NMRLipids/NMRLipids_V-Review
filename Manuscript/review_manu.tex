@@ -839,7 +839,7 @@ the spectral density must be first calculated from auto-correlation function usi
 Usually sum of 4 or more exponential are fitted to the calculated auto--correlation function and then 
 analytical Fourier transform is used to calculate the spectral 
 density~\cite{pastor88,venable93,pastor02,eldho03,ollila07a,ferreira15},
-however some authors have also used stretched exponential exponential functions~\cite{lindahl01,wohlert06a}.
+however some authors have also used stretched exponential functions~\cite{lindahl01,wohlert06a}.
 The chosen functional form should not affect the spin relaxation rate values as long as the fit is good, however 
 the correct form to describe the real relaxation process can be debated~\cite{leftin11,wohlert06a,edholm08,klauda08a,klauda08c}. 
 Single exponential function is not enough to describe relaxation observed in simulations while 4 gives a reasonable 
@@ -1004,7 +1004,7 @@ as demonstrated in Fig.~\ref{FFs}, indicating that the bilayer structure is simi
 By following the notation from Ref. \cite{kucerka10}, the form factor is connected to the bilayer atom number density through the 
 equation 
 \begin{equation}\label{FF}
-|F(q)|=|\int_{-D/2}^{D/2}(\sum_\alpha f_\alpha(q_z)n_\alpha(z) - \rho_s) \exp(i z q_z) {\rm d}z|,
+F(q)=\int_{-D/2}^{D/2}(\sum_\alpha f_\alpha(q_z)n_\alpha(z) - \rho_s) \exp(i z q_z) {\rm d}z,
 \end{equation}
 where $n_\alpha(z)$ is the atom $\alpha$ number density as a function of membrane normal coordinate $z$,
 $f_\alpha(q_z)$ is the atom scattering length density,
@@ -1020,9 +1020,15 @@ Consequently, highest-structural resolution can be achieved upon combining SAXS 
 
 For symmetric lipid bilayers Eq.~\ref{FF} simplifies to the widely used form
 \begin{equation}\label{FFsimpl}
-|F(q)|=|\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z|,
+F(q)=\int_{-D/2}^{D/2}\Delta \rho_e(z) \cos(zq_z) {\rm d}z,
 \end{equation}
 where $\Delta \rho_e(z)$ is the scattering length density difference between solvent and bilayer.
+
+{\bf It should be noted that the form factor's sign cannot be determined directly from scattering experiments as all information on the phase is 
+lost (known as the `phase-problem' in diffraction), thus $|F(q)|$ is typically reported. However, the sign is 
+practically determined by models for the bilayer structure used to extract the form factor from scattering intensity~\cite{kucerka10,marquardt15}
+since only completely unphysical model would reproduce incorrent signs. Thus, the sign is not a useful quantity for assessing 
+the high level accuracy of simulation data.}
 
 %\onecolumngrid
 %\todo{Discussion about related issues can be found at:
@@ -1088,8 +1094,7 @@ values~\cite{chiu09,klauda10,klauda12,dickson12,lim12,jambeck12,chowdhary13,jamb
 (see Fig.~\ref{FFcomp}), indicating discrepancies in fine structural details such as, e.g. hydrocarbon chain packing or headgroup structure.
 Typically, the comparison of experimental and simulated form factors is based on visual inspection while also quantitative measure
 for simulated form factor quality has been suggested~\cite{kucerka10}. In some studies also Fourier transform coefficients are
-compared~\cite{benz05}.
-Note that the sign of the form factor is not a sensitive parameter for control of the quality of bilayer simulation data. The form factor's sign cannot be determined directly from scattering experiments as all information on the phase is lost (known as the `phase-problem' in diffraction). However, the sign of the form factor is readily determined using physically reasonable models for the bilayer structure~\cite{kucerka10.marquardt15}. This means that many models will yield the correct form factor sign. Thus, the sign is not a useful quantity for assessing the accuracy of simulation data.
+compared~\cite{benz05}. 
 
 \begin{figure*}[]
 %  \centering
