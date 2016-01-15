@@ -51,8 +51,8 @@
 
 \begin{frontmatter}
 
-\title{Atomistic resolution structure and dynamics of lipid bilayers in simulations and experiments}
-%\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+\title{Atomistic resolution structure and dynamics of lipid bilayers in simulations and experiments  \tnotemark[mytitlenote]} 
+\tnotetext[mytitlenote]{This work is dedicated to the memory of respected colleague and former supervisor, Dr. Marja Hyv{\"o}nen.}
 
 %% Group authors per affiliation:
 %\author{O. H. Samuli Ollila \fnref{myfootnote}}
@@ -68,6 +68,7 @@
 
 
 \address[mymainaddress]{Department of Neuroscience and Biomedical Engineering, Aalto University}
+%\address[mytitlenote]{This work is dedicated to the memory of Dr. Marja Hyv{\"o}nen who }
 \address[georgmainaddress]{University of Graz, Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, Humboldtstr. 50/III, Graz, Austria}
 \address[georgsecondaryaddress]{BioTechMed-Graz, Graz, Austria}
 
@@ -233,7 +234,7 @@ in the case of disagreement between model and experiments.
     backbone segments~\cite{botan15}. The blue shaded regions show the
     subjective sweetspots where the simulation data should fall to agree with experiments, 
     based on estimated quantitative accuracy of order parameter measurements by Botan et al.~\cite{botan15}.
-    Adapted with permission from Botan et al. J. Phys. Chem. B. DOI:10.1021/acs.jpcb.5b04878 Copyright 2015 American Chemical Society.
+    Adapted with permission from Botan et al. J. Phys. Chem. B. {\bf 2015}, 119, 15075-15088 Copyright 2015 American Chemical Society.
     B) Chemical structure of 1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
     C) Order parameters $|S_{{\rm CH}}|$ for POPC acyl chains 
     from $^1$H-$^{13}$C NMR at 300K (black dots)~\cite{ferreira13},
@@ -368,7 +369,7 @@ and suggested that order parameters are known with the accuracy of $\pm$0.02 for
 purified PC lipid bilayer samples~\cite{botan15} which agrees with the estimate of Gross et al~\cite{gross97}. 
 Based on this estimation Botan et al. suggested sweet spots where choline and glycerol backbone order parameters from simulations should range, see Fig.~\ref{allOPs} A). Also acyl chain order parameters from different techniques 
 are in good agreement when compared by several authors~\cite{gross97,dvinskikh05a,ferreira13,leftin14},
-however the 0.02 accuracy might not be achieved for some segments.%\todo{Maybe specify to which ones?}.
+however, the 0.02 accuracy might not be achieved for some segments.%\todo{Maybe specify to which ones?}.
 The comparison by Ferreira et al.~\cite{ferreira13} for POPC acyl chains is also shown in Fig.~\ref{allOPs} C). 
 
 
@@ -567,7 +568,7 @@ based model \cite{ferreira13} and too much forking in Amber Lipid14~\cite{madej1
   \caption{\label{cholTAILmadej}
     Cholesterol effect on acyl chain order parameters compared between the Amber Lipid14 model (black squares)~\cite{madej15} and experiments (red circles)~\cite{ferreira13}
     showing significantly better agreement than Berger/H{\"o}ltje based model compared by Ferreira et al. \cite{ferreira13} to the same experimental data.
-    Reprinted with permission from Madej et al. {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
+    Reprinted with permission from Madej et al. J. Phys. Chem. B {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
   } 
 \end{figure*}
 
@@ -618,8 +619,8 @@ reveal significant differences between models and experiments, and none of the a
 reproduces all order parameters within experimental error.
 On the other hand, experimentally observed choline order parameter increase with 
 dehydration~\cite{bechinger91,ulrich94,dvinskikh05b} and decrease due to cation 
-penetration~\cite{akutsu81,altenbach84} were reproduced in simulations~\cite{botan15,ionpaper}.
-However, especially the effect induced by Na$^+$ ion penetration is strongly overestimated
+binding~\cite{akutsu81,altenbach84} were reproduced in simulations~\cite{botan15,ionpaper}.
+However, especially the effect induced by Na$^+$ ion binding is strongly overestimated
 in several models which arises most likely from an artificially high partition coefficient~\cite{ionpaper},
 as also demonstrated in Fig.~\ref{changesDUEna}.
 The effect of cholesterol on glycerol backbone and choline is overestimated
@@ -698,12 +699,12 @@ which is suggested to have significant contribution e.g. to membrane electrostat
 and acyl chain extended conformations~\cite{kinnunen12}.
 Also the atomistic resolution structures sampled by glycerol backbone and choline headgroup are not yet fully 
 resolved~\cite{gally75,seelig77,strenk85,akutsu91,bruzik97,Semchyschyn04}.
-Unfortunately the accuracy of atomistic resolution models is not yet sufficient to solve these issues.
+Unfortunately, the accuracy of atomistic resolution models is not yet sufficient to solve these issues.
 However, the modeling of interfacial region structure has been getting more attention lately~\cite{klauda10,prakash10,dickson12,chowdhary13,botan15}, 
 thus higher quality models may be expected.  
 
 On the other hand, the increase of choline $\alpha$ and $\beta$ order parameters with dehydration 
-and decrease with cation penetration were correctly reproduced by several models, 
+and decrease with cation binding were correctly reproduced by several models, 
 despite of inaccurate choline structures~\cite{botan15,ionpaper}. The order parameter increase
 was related to the choline P--N vector tilting more parallel to the membrane normal~\cite{botan15}
 and order parameter decrease to the cation binding affinity~\cite{ionpaper}. 
@@ -916,7 +917,7 @@ correct order of magnitude in simulations. Consequently, the rapid acyl chain fl
 simulations can be considered as realistic which further supports the advantage of simulation videos as an
 intuitive lipid bilayer picture compared to the traditional static pictures. While the molecular sampling rates 
 seems to be underestimated closer to the interface, also the sampled structures are not exactly correct
-in simulations \cite{botan15}, thus the sampling rates in simulations are mainly interesting only for people 
+in simulations \cite{botan15}, thus the sampling rates in simulations are mainly interesting for people 
 improving the models. 
 
 As discussed in Section \ref{dynamicsEXP} and for example in Ref. \cite{ferreira15},
@@ -944,7 +945,7 @@ that the whole lipid molecule is wobbling as a cone and that all lipid segments 
 this motion. Further timescales for segmental dynamics then arises from the dynamics inside the cone. 
 The auto--correlation functions predicted by the model are successfully fitted to the simulation and 
 experimental data~\cite{pastor88,pastor02,klauda08a,klauda08c,sivanandam09}, however,
-fits with similar or better quality would be probably possible also with other type of models as well.
+fits with similar or better quality would be probably possible also with other type of models.
 In addition, significant changes of structure and dynamics experienced in the acyl chain region may not 
 hinge on the headgroup~\cite{ferreiraTHESIS,botan15} indicating weak coupling 
 between these segments, in line with one plausible interpretation for recent field cycling 
@@ -1101,7 +1102,7 @@ compared~\cite{benz05}.
   \includegraphics[width=12.2cm]{../Fig/FFcompMADEJ.eps}
 \newline
   \caption{\label{FFcomp}
-    Comparison of experimental~\cite{pan09,kucerka07b} and simulated (using Amber Lipid14 ~\cite{madej15}) X-ray and neutron form factors for pure DOPC bilayers and DOPC/cholesterol ($x_{chol} = 30$ mol\%) mixtures. Within experimental uncertainty, simulations agree well with neutron data. For X-ray data, simulations match well DOPC experimental data at low $q$, but are slightly off for the third lobe, indicating  some differences in the lipid bilayer fine structure. The DOPC/cholesterol mixture clearly shows disagreement between model and experiment for $q > 0.3$\AA$^{-1}$. Overall, the simulated form factor minima are shifted toward lower $q$, revealing an overestimated bilayer thickening effect of cholesterol. Reprinted with permission from Madej et al. {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
+    Comparison of experimental~\cite{pan09,kucerka07b} and simulated (using Amber Lipid14 ~\cite{madej15}) X-ray and neutron form factors for pure DOPC bilayers and DOPC/cholesterol ($x_{chol} = 30$ mol\%) mixtures. Within experimental uncertainty, simulations agree well with neutron data. For X-ray data, simulations match well DOPC experimental data at low $q$, but are slightly off for the third lobe, indicating  some differences in the lipid bilayer fine structure. The DOPC/cholesterol mixture clearly shows disagreement between model and experiment for $q > 0.3$\AA$^{-1}$. Overall, the simulated form factor minima are shifted toward lower $q$, revealing an overestimated bilayer thickening effect of cholesterol. Reprinted with permission from Madej et al. J. Phys. Chem. B {\bf 2015}, 119, 12424-12435. Copyright 2015 American Chemical Society.
   } 
 \end{figure*}
 
